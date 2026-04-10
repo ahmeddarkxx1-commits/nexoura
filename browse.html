@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصفح المنتجات | نكسورا</title>
+    <meta name="description" content="استكشف المنتجات الرقمية، القوالب، والأدوات اللي هتساعدك تبدأ رحلتك في الربح من الإنترنت مع نكسورا.">
+    <meta name="keywords" content="منتجات رقمية, كتب الكترونية, كورسات, قوالب جاهزة, نكسورا">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="تصفح المنتجات | نكسورا">
+    <meta property="og:description" content="استكشف المنتجات الرقمية والحصريات في نكسورا.">
+    <meta property="og:image" content="assets/images/logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .search-section {
+            padding: 140px 0 60px;
+            background: var(--surface-soft);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        .search-input {
+            padding: 14px 24px;
+            border-radius: var(--inner-radius);
+            border: 1px solid var(--border);
+            width: 100%;
+            max-width: 400px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+            background: var(--bg);
+        }
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+        .category-tabs {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            mask-image: linear-gradient(to right, black 90%, transparent);
+        }
+        .category-tabs::-webkit-scrollbar {
+            display: none;
+        }
+        .tab {
+            padding: 12px 28px; /* Increased padding as requested */
+            border-radius: 100px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+            white-space: nowrap;
+            background: var(--surface-soft);
+            border: 1px solid var(--border-light);
+        }
+        .tab:hover {
+            color: var(--primary);
+            border-color: var(--primary-light);
+        }
+        .tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 8px 16px -4px rgba(79, 70, 229, 0.4);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container nav">
+            <a href="index.html" class="logo">
+                <span>Nexora</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="browse.html" class="nav-link active">المنتجات</a>
+                <a href="index.html#benefits" class="nav-link">ليه تختارنا؟</a>
+                <a href="index.html#faq" class="nav-link">أسئلة شائعة</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <a href="browse.html" class="btn btn-primary">شوف كل المنتجات</a>
+                <button id="menu-toggle" class="hamburger" aria-label="Open Menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="container">
+                <h1 style="margin-bottom: 24px;">كل اللي تحتاجه عشان تبدأ</h1>
+                <div class="filter-bar">
+                    <div class="category-tabs">
+                        <div class="tab active" data-cat="all">الكل</div>
+                        <div class="tab" data-cat="UI Kits">أدوات تصميم</div>
+                        <div class="tab" data-cat="Templates">قوالب جاهزة</div>
+                        <div class="tab" data-cat="E-Books">كتب إلكترونية</div>
+                        <div class="tab" data-cat="Courses">كورسات أونلاين</div>
+                    </div>
+                    <input type="text" id="search-box" class="search-input" placeholder="بتدور على إيه؟">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div id="browse-grid" class="card-grid">
+                    <!-- Dynamic Items -->
+                </div>
+                <div id="no-results" style="display: none; text-align: center; padding: 100px 0;">
+                    <p class="text-muted">للأسف مفيش حاجة بالاسم ده، جرب تبحث بكلمة تانية.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding: 60px 0; border-top: 1px solid var(--border-light); background: var(--bg);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
+            <div style="max-width: 300px;">
+                <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                    <span>Nexora</span>
+                </a>
+                <p class="text-muted">بنساعدك تختصر الطريق وتبني مستقبلك في العمل الحر بأدوات ومنتجات رقمية مضمونة.</p>
+            </div>
+            <div style="display: flex; gap: 80px;">
+                <div>
+                    <h4 style="margin-bottom: 20px;">المتجر</h4>
+                    <ul style="display: grid; gap: 10px;" class="text-muted">
+                        <li><a href="browse.html">كل المنتجات</a></li>
+                        <li><a href="browse.html?cat=E-Books">كتب إلكترونية</a></li>
+                        <li><a href="browse.html?cat=Courses">كورسات</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 20px;">الدعم</h4>
+                    <ul style="display: grid; gap: 10px;" class="text-muted">
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border-light); text-align: center;">
+            <p class="text-muted" style="font-size: 0.85rem;">&copy; 2026 Nexora. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import products from './js/products.js';
+
+        const grid = document.getElementById('browse-grid');
+        const searchInput = document.getElementById('search-box');
+        const tabs = document.querySelectorAll('.tab');
+        const noResults = document.getElementById('no-results');
+
+        let currentCat = 'all';
+        let searchQuery = '';
+
+        function render() {
+            const filtered = products.filter(p => {
+                const matchesCat = currentCat === 'all' || p.category === currentCat;
+                const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                     p.description.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+                grid.innerHTML = filtered.map(p => `
+                    <div class="product-card reveal active">
+                        <div class="product-image-container">
+                            <img src="${p.image}" alt="${p.name}" class="product-image" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800'">
+                            ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">${p.name}</h3>
+                            <p class="product-desc">${p.description}</p>
+                            <div class="product-footer">
+                                <span class="product-price">${p.price}</span>
+                                <a href="product.html?id=${p.id}" class="btn btn-secondary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            render();
+        });
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentCat = tab.getAttribute('data-cat');
+                render();
+            });
+        });
+
+        // Check for URL category param
+        const urlParams = new URLSearchParams(window.location.search);
+        const catParam = urlParams.get('cat');
+        if (catParam) {
+            const targetTab = Array.from(tabs).find(t => t.getAttribute('data-cat') === catParam);
+            if (targetTab) targetTab.click();
+        }
+
+        render();
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
