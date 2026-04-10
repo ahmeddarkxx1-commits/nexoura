@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initRevealAnimations();
     handleProductDetail();
     initPaymentSuccess(); // Handles redirects from payment providers
+    initCountdown();
+    initExitIntent();
 });
 
 // Theme Management
@@ -308,3 +310,77 @@ window.copyPaymentDetails = function() {
         }, 2000);
     });
 };
+
+// Countdown Timer Logic
+function initCountdown() {
+    const timerDisplay = document.getElementById('countdown-timer');
+    if (!timerDisplay) return;
+
+    // Set countdown for 5 hours from now
+    let timeRemaining = 5 * 60 * 60; 
+    
+    // Use localStorage to keep timer consistent per user session
+    const savedEndTime = localStorage.getItem('cro_countdown_end');
+    if (savedEndTime) {
+        const now = Math.floor(Date.now() / 1000);
+        if (savedEndTime > now) {
+            timeRemaining = savedEndTime - now;
+        } else {
+            // Reset to 5 hours if expired
+            localStorage.setItem('cro_countdown_end', Math.floor(Date.now() / 1000) + timeRemaining);
+        }
+    } else {
+        localStorage.setItem('cro_countdown_end', Math.floor(Date.now() / 1000) + timeRemaining);
+    }
+
+    const interval = setInterval(() => {
+        let hours = Math.floor(timeRemaining / 3600);
+        let minutes = Math.floor((timeRemaining % 3600) / 60);
+        let seconds = timeRemaining % 60;
+
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+
+        if (timeRemaining <= 0) {
+            clearInterval(interval);
+            timerDisplay.textContent = "00:00:00";
+        } else {
+            timeRemaining--;
+        }
+    }, 1000);
+}
+
+// Exit Intent Popup
+function initExitIntent() {
+    const exitModal = document.getElementById('exit-intent-modal');
+    if (!exitModal) return;
+
+    // Only show once per session
+    if (sessionStorage.getItem('exit_intent_shown')) return;
+
+    const showModal = () => {
+        exitModal.classList.add('active');
+        document.body.classList.add('modal-open');
+        sessionStorage.setItem('exit_intent_shown', 'true');
+    };
+
+    // Desktop: Mouse leaves top area
+    document.addEventListener('mouseleave', (e) => {
+        if (e.clientY <= 0) {
+            if (!sessionStorage.getItem('exit_intent_shown')) {
+                showModal();
+            }
+        }
+    });
+
+    // Mobile: Show after 45 seconds
+    setTimeout(() => {
+        if (!sessionStorage.getItem('exit_intent_shown')) {
+            showModal();
+        }
+    }, 45000);
+}
+

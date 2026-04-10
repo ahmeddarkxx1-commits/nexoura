@@ -12,12 +12,46 @@ body {
     direction: ltr;
 }
 
+/* Top Banner (Countdown) */
+.top-banner {
+    background: var(--text-main);
+    color: var(--bg);
+    padding: 10px 0;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+}
+
+[data-theme="dark"] .top-banner {
+    background: var(--primary);
+    color: white;
+}
+
+.countdown-clock {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: #ff4757;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.header {
+    top: 40px; /* Offset for banner */
+}
+
 /* Hero Modifications */
 .redesigned-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 140px;
+    padding-top: 100px;
     padding-bottom: 80px;
 }
 
@@ -26,16 +60,12 @@ body {
 }
 
 .hero-badge {
-    background: rgba(79, 70, 229, 0.1);
-    color: var(--primary);
-    border: 1px solid rgba(79, 70, 229, 0.2);
+    background: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.3);
     font-size: 0.9rem;
     padding: 8px 20px;
-}
-
-[data-theme="dark"] .hero-badge {
-    color: var(--primary-light);
-    border-color: rgba(129, 140, 248, 0.3);
+    font-weight: 700;
 }
 
 .hero-title span {
@@ -45,38 +75,149 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Floating Mockup */
-.hero-mockup-wrapper {
-    margin-top: 60px;
+.hero-trust-micro small {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Pulse Animation for CTA */
+.btn-pulse {
+    animation: pulse-shadow 2s infinite;
+}
+
+@keyframes pulse-shadow {
+    0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(79, 70, 229, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 1.15rem;
+}
+
+.btn-block {
+    display: flex;
     width: 100%;
-    max-width: 1000px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
+    text-align: center;
 }
 
-.hero-mockup {
-    background: var(--surface-glass);
-    border-radius: 16px;
-    padding: 10px;
-    box-shadow: var(--shadow-premium);
-    transform: perspective(1000px) rotateX(2deg);
-    transition: transform 0.5s ease;
-    border: 1px solid var(--border);
-}
-
-[data-theme="dark"] .hero-mockup {
-    border-color: var(--glass-border);
-}
-
-.hero-mockup:hover {
-    transform: perspective(1000px) rotateX(0deg) translateY(-10px);
-}
-
-.mockup-img {
-    width: 100%;
-    border-radius: 8px;
+/* Winning Product Section */
+.winning-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: var(--surface-soft);
     border: 1px solid var(--border-light);
+    border-radius: var(--outer-radius);
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 992px) {
+    .winning-product {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+.w-image-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.w-product-img {
+    border-radius: var(--inner-radius);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+}
+
+.w-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trust-badge {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.w-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-tag {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.w-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.problem-agitation {
+    background: rgba(255, 71, 87, 0.05);
+    border-left: 4px solid #ff4757;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+    color: var(--text-main);
+}
+
+.solution-benefits ul {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.solution-benefits li {
+    font-size: 1.05rem;
+}
+
+.pricing-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.price-strikethrough {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    text-decoration: line-through;
+}
+
+.price-now {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.price-urgency {
+    background: #10b981;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
 }
 
 /* Trust Banner */
@@ -183,6 +324,24 @@ body {
     gap: 30px;
 }
 
+.relative-card {
+    position: relative;
+}
+
+.scarcity-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #ff4757;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.3);
+    z-index: 10;
+}
+
 .service-card {
     background: var(--bg);
     padding: 40px;
@@ -248,12 +407,10 @@ body {
 }
 
 .payment-badges-wrapper {
-    background: var(--surface-soft);
-    padding: 30px;
-    border-radius: var(--outer-radius);
-    border: 1px solid var(--border-light);
-    max-width: 600px;
-    margin: 0 auto;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 12px;
 }
 
 .payment-badges {
@@ -264,7 +421,7 @@ body {
 }
 
 .payment-badges span {
-    background: var(--bg);
+    background: var(--surface-soft);
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
@@ -293,6 +450,21 @@ body {
 .floating-whatsapp:hover {
     transform: scale(1.1);
     color: white;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.close-modal-btn:hover {
+    color: var(--text-main);
 }
 
 @media (max-width: 768px) {
