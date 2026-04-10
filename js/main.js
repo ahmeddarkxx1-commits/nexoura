@@ -145,7 +145,7 @@ function renderFeaturedProducts() {
                 <p class="product-desc">${product.description}</p>
                 <div class="product-footer">
                     <span class="product-price">${product.price}</span>
-                    <a href="product.html?id=${product.id}" class="btn btn-secondary">التفاصيل</a>
+                    <a href="product.html?id=${product.id}" class="btn btn-primary">Buy Now</a>
                 </div>
             </div>
         </div>
@@ -188,7 +188,7 @@ function handleProductDetail() {
     if (egpDisplay && product.price) {
         const usdValue = parseFloat(product.price.replace('$', ''));
         const egpValue = (usdValue * EXCHANGE_RATE).toLocaleString('ar-EG');
-        egpDisplay.textContent = `≈ ${egpValue} ج.م تقريباً`;
+        egpDisplay.textContent = `≈ ${egpValue} EGP`;
     }
 
     if (elements.buyBtn) {
@@ -202,14 +202,14 @@ const EXCHANGE_RATE = 50; // 1 USD = 50 EGP
 const PAYMENT_DETAILS = {
     vfcash: {
         number: '01097207353',
-        label: 'رقم فودافون كاش:',
-        title: 'الدفع عن طريق فودافون كاش',
+        label: 'Vodafone Cash Number:',
+        title: 'Pay via Vodafone Cash',
         icon: '📱'
     },
     instapay: {
         number: '01556533745',
-        label: 'عنوان إنستا باي:',
-        title: 'الدفع عن طريق إنستا باي',
+        label: 'InstaPay Address:',
+        title: 'Pay via InstaPay',
         icon: '⚡'
     }
 };
@@ -229,19 +229,19 @@ window.openPaymentModal = function(method) {
     document.getElementById('modal-title').textContent = details.title;
     document.getElementById('number-label').textContent = details.label;
     document.getElementById('modal-number').textContent = details.number;
-    document.getElementById('modal-amount').textContent = `${product.price} (تقريباً ${egpPrice} جنيه مصري)`;
+    document.getElementById('modal-amount').textContent = `${product.price} (approx. ${egpPrice} EGP)`;
     
     // Update WhatsApp link dynamically based on phone input
     const whatsappBtn = document.getElementById('modal-whatsapp-btn');
     const phoneInput = document.getElementById('customer-phone');
     
     const updateWhatsAppLink = () => {
-        const phone = phoneInput ? (phoneInput.value || 'غير محدد') : 'غير محدد';
-        const message = `أهلاً نكسورا، حابب أفعل فوري لمنتج "${product.name}"\n` +
-                        `السعر: ${product.price} (${egpPrice.toLocaleString('ar-EG')} ج.م)\n` +
-                        `طريقة الدفع: ${details.title}\n` +
-                        `رقم الهاتف: ${phone}\n\n` +
-                        `دي سكرين شوت العملية لتأكيد الوصول الفوري للمحتوى.`;
+        const phone = phoneInput ? (phoneInput.value || 'Not provided') : 'Not provided';
+        const message = `Hello Nexoura, I'd like to instantly get the "${product.name}"\n` +
+                        `Price: ${product.price} (approx. ${egpPrice.toLocaleString()} EGP)\n` +
+                        `Payment Method: ${details.title}\n` +
+                        `Phone: ${phone}\n\n` +
+                        `Here is the payment screenshot to confirm my order.`;
         const encodedMsg = encodeURIComponent(message);
         whatsappBtn.href = `https://wa.me/201097207353?text=${encodedMsg}`;
     };
@@ -278,10 +278,10 @@ function showSuccessUI(product) {
     container.innerHTML = `
         <div style="text-align: center; padding: 20px;">
             <div style="width: 60px; height: 60px; background: var(--success); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 30px;">✓</div>
-            <h2 style="margin-bottom: 10px;">تم تأكيد الدفع بنجاح!</h2>
-            <p class="text-muted" style="margin-bottom: 24px;">شكراً لثقتك في نكسورا. تقدر تحمل منتجك دلوقتي من الزرار اللي تحت.</p>
-            <a href="${product.downloadLink || '#'}" class="btn btn-primary" style="width: 100%;" download>تحميل المنتج الآن</a>
-            <p style="margin-top: 16px; font-size: 0.85rem;">واجهت مشكلة؟ <a href="contact.html" style="color: var(--primary);">تواصل معنا</a></p>
+            <h2 style="margin-bottom: 10px;">Payment Confirmed!</h2>
+            <p class="text-muted" style="margin-bottom: 24px;">Thank you for trusting Nexoura. You can download your product now.</p>
+            <a href="${product.downloadLink || '#'}" class="btn btn-primary" style="width: 100%;" download>Download Now</a>
+            <p style="margin-top: 16px; font-size: 0.85rem;">Facing an issue? <a href="contact.html" style="color: var(--primary);">Contact Us</a></p>
         </div>
     `;
 }
