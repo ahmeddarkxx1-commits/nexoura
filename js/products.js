@@ -8,7 +8,7 @@ const products = [
         price: "$49",
         badge: "Best Seller",
         category: "UI Kits",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+        image: "assets/images/ui_kit_hero_1775771666819.png",
         paymentLink: "https://accept.paymob.com/standalone/?"
     },
     {
@@ -20,7 +20,7 @@ const products = [
         price: "$29",
         badge: "New",
         category: "Website Templates",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+        image: "assets/images/saas_guide_hero_1775771679352.png",
         paymentLink: "https://accept.paymob.com/standalone/?"
     },
     {
@@ -32,19 +32,19 @@ const products = [
         price: "$19",
         badge: "Featured",
         category: "Templates",
-        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=1200",
+        image: "assets/images/notion_os_hero_1775771739545.png",
         paymentLink: "https://accept.paymob.com/standalone/?"
     },
     {
-        id: "canva-social-bundle",
-        name: "Canva Social Media Bundle",
+        id: "icons-pro-pack",
+        name: "Icons Pro Pack",
         tagline: "Precision, simplicity, and professionalism",
-        description: "Over 200 fully editable Canva templates designed for high-engagement Instagram, TikTok, and LinkedIn posts.",
-        fullDescription: "Our templates are crafted to help you stand out. Includes carousel posts, story templates, and video covers. Fully adaptable to your brand colors and typography.",
+        description: "Over 200 fully editable SVGs designed for high-engagement modern user interfaces.",
+        fullDescription: "Our icons are crafted to help you stand out. Fully adaptable to your brand colors and stroke widths.",
         price: "$39",
         badge: "Top Rated",
-        category: "Canva Templates",
-        image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=1200",
+        category: "UI Kits",
+        image: "assets/images/icons_pro_hero_1775771841217.png",
         paymentLink: "https://accept.paymob.com/standalone/?"
     },
     {
@@ -55,20 +55,20 @@ const products = [
         fullDescription: "Save hours of trial and error. This library provides tested and proven prompts to automate your workflow, generate marketing copy, and debug code efficiently.",
         price: "$15",
         badge: "Best Seller",
-        category: "AI Tools",
+        category: "Tools",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
         paymentLink: "https://accept.paymob.com/standalone/?"
     },
     {
-        id: "digital-business-blueprint",
-        name: "Digital Business Blueprint",
-        tagline: "Scale your digital empire",
-        description: "A comprehensive e-book detailing how to set up, operate, and scale a digital products business globally.",
-        fullDescription: "From finding the right niche to running automated email sequences, this blueprint reveals the exact framework used by top digital creators.",
-        price: "$27",
+        id: "smart-freelancer-book",
+        name: "كتاب الفريلانسر الذكي",
+        tagline: "الدليل الشامل للنجاح في العمل الحر",
+        description: "دليلك العملي لاكتشاف مهارتك، تسعير خدماتك، وبناء مصدر دخل مستدام من العمل الحر.",
+        fullDescription: `إليك ما ستحصل عليه من الكتاب:<br><br>🎯 <strong>تعرف مهارتك القابلة للبيع</strong><br>تمرين عملي يساعدك تكتشف إيه اللي تقدر تبيعه دلوقتي — حتى لو حاسس إن مهارتك عادية.<br><br>👤 <strong>تبني بروفايل يبيع بدلك</strong><br>إزاي تكتب Bio وعنوان مهني يخلي العميل يثق فيك قبل ما يكلمك — مع قوالب جاهزة.<br><br>💸 <strong>تعرف تسعر صح وترفع سعرك</strong><br>معادلة تسعير واضحة بالجنيه وبالدولار — ومتى وإزاي ترفع سعرك مع مرور الوقت.<br><br>✉️ <strong>تكتب رسالة تقديم بترد عليها</strong><br>الهيكل الدقيق للرسالة اللي بتخلي العميل يرد في نفس اليوم — مع مثال حقيقي جاهز.<br><br>📱 <strong>تعرف تستلم فلوسك بأمان</strong><br>مقارنة كاملة بين Payoneer وWise وإنستاباي وفودافون كاش — إيه الأنسب لكل حالة.<br><br>📈 <strong>تبني مصدر دخل مش بيعتمد على وقتك</strong><br>إزاي تتحول من بيع وقتك لبيع منتج رقمي — وتكسب وانت نايم.`,
+        price: "$4.81",
         badge: "Premium",
         category: "E-Books",
-        image: "https://images.unsplash.com/photo-1541873676946-84099901021e?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=1200",
         paymentLink: "https://accept.paymob.com/standalone/?"
     }
 ];

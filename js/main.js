@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initMobileMenu();
     initHeader();
+    initHeaderOffset();
     renderFeaturedProducts();
     initRevealAnimations();
     handleProductDetail();
@@ -103,6 +104,20 @@ function initHeader() {
     });
 }
 
+// Adjust fixed header if top banner exists
+function initHeaderOffset() {
+    const banner = document.querySelector('.top-banner');
+    const header = document.querySelector('.header');
+    
+    if (banner && header) {
+        const adjustOffset = () => {
+            header.style.top = banner.offsetHeight + 'px';
+        };
+        adjustOffset();
+        window.addEventListener('resize', adjustOffset);
+    }
+}
+
 // Reveal animations on scroll
 function initRevealAnimations() {
     const observerOptions = {
@@ -181,7 +196,7 @@ function handleProductDetail() {
 
     if (elements.name) elements.name.textContent = product.name;
     if (elements.tagline) elements.tagline.textContent = product.tagline;
-    if (elements.description) elements.description.textContent = product.fullDescription;
+    if (elements.description) elements.description.innerHTML = product.fullDescription;
     if (elements.price) elements.price.textContent = product.price;
     if (elements.image) elements.image.src = product.image;
     

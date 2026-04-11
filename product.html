@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تفاصيل المنتج | نكسورا</title>
-    <meta name="description" content="تعرف على تفاصيل المنتج، مميزاته، وإزاي هيساعدك تبدأ رحلتك في العمل الحر مع نكسورا.">
-    <meta name="keywords" content="منتجات رقمية, شراء منتجات رقمية, نكسورا, فوادفون كاش">
+    <title>Product Details | Nexoura</title>
+    <meta name="description" content="View product details, features, and get instant access to premium digital assets with Nexoura.">
+    <meta name="keywords" content="buy digital products, web templates, premium UI kits, canva templates, nexoura">
     <meta name="robots" content="index, follow">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="apple-touch-icon" href="assets/images/logo.png">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="product">
-    <meta property="og:title" content="نكسورا | التفاصيل والطلب">
-    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:title" content="Product Details | Nexoura">
+    <meta property="og:image" content="https://nexoura.org/assets/images/logo.png">
 
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -87,22 +87,22 @@
     <!-- Navigation -->
     <header class="header">
         <div class="container nav">
-            <a href="index.html" class="logo">
-                <span>Nexora</span>
+            <a href="/" class="logo" aria-label="Nexoura Home">
+                <span>Nexoura</span>
             </a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">الرئيسية</a>
-                <a href="browse.html" class="nav-link active">المنتجات</a>
-                <a href="index.html#benefits" class="nav-link">ليه تختارنا؟</a>
-                <a href="index.html#faq" class="nav-link">أسئلة شائعة</a>
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="/" class="nav-link">Home</a>
+                <a href="browse.html" class="nav-link active">Products</a>
+                <a href="/#services" class="nav-link">Services</a>
+                <a href="/#contact" class="nav-link">Contact</a>
             </nav>
             <div class="nav-actions">
                 <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
-                <a href="browse.html" class="btn btn-primary">شوف كل المنتجات</a>
-                <button id="menu-toggle" class="hamburger" aria-label="Open Menu">
+                <a href="browse.html" class="btn btn-primary">Browse All</a>
+                <button id="menu-toggle" class="hamburger" aria-label="Open Mobile Menu">
                     <span></span>
                     <span></span>
                 </button>
@@ -111,162 +111,178 @@
     </header>
 
     <main class="container" style="padding-top: 40px; padding-bottom: 40px;">
-        <div class="product-hero" style="gap: 40px; align-items: flex-start;">
+        <article class="product-hero" style="gap: 40px; align-items: flex-start;">
             <div class="product-gallery reveal">
-                <img id="pd-image" src="" alt="Product Preview" style="width: 100%; height: auto;" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200'">
+                <img id="pd-image" src="" loading="eager" alt="Product Preview" style="width: 100%; height: auto;" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200'">
             </div>
             
             <div class="product-details reveal">
-                <span class="detail-badge" id="pd-tagline">محتوى مميز</span>
-                <h1 id="pd-name" style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 16px;">اسم المنتج</h1>
+                <span class="detail-badge" id="pd-tagline">Premium Content</span>
+                <h1 id="pd-name" style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 16px;">Product Name</h1>
                 <div style="margin-bottom: 24px;">
                     <span id="pd-price" style="font-size: 2rem; font-weight: 800; color: var(--text-main);">$0.00</span>
-                    <span id="pd-egp-price-display" class="pd-egp-price">≈ 0.00 ج.م</span>
+                    <span id="pd-egp-price-display" class="pd-egp-price">≈ 0.00 EGP</span>
                 </div>
                 <p id="pd-description" class="text-muted" style="font-size: 1.1rem; margin-bottom: 30px;">
-                    وصف كامل للمنتج والمميزات اللي هيقدمها لك عشان تبدأ صح.
+                    Full product description loading...
                 </p>
 
                 <div class="features-list">
                     <div class="feature-item">
                         <span class="check-icon">✓</span>
-                        <span>تسليم فوري للملفات</span>
+                        <span>Instant Auto-Delivery</span>
                     </div>
                     <div class="feature-item">
                         <span class="check-icon">✓</span>
-                        <span>تحديثات ودعم مدى الحياة</span>
+                        <span>Lifetime Updates & Support</span>
                     </div>
                     <div class="feature-item">
                         <span class="check-icon">✓</span>
-                        <span>حق الاستخدام التجاري الكامل</span>
+                        <span>Full Commercial License</span>
                     </div>
                 </div>
 
                 <div class="payment-card reveal">
-                    <p style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 16px;">اختار طريقة الدفع المناسبة ليك</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 16px;">Select Payment Method</p>
                     
                     <div class="payment-selection-grid">
-                        <a id="pd-buy-btn" href="#" class="payment-option card-option active">
-                            <div class="option-brand">
+                        <a id="pd-buy-btn" href="#" class="payment-option card-option" style="opacity: 0.5; pointer-events: none; cursor: not-allowed; background: var(--surface-soft); border-color: transparent;">
+                            <div class="option-brand" style="filter: grayscale(100%);">
                                 <svg width="40" height="24" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="20" rx="3" fill="#1434CB"/><path d="M12.5 13.5l1-6h2l-1 6h-2zM21.5 7.5l-0.5 3h1.5l-0.2 1.5h-1.5l-0.3 2h2l-0.3 1.5h-3.5L19.5 7.5h2z" fill="white"/></svg>
                                 <svg width="32" height="24" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="10" r="8" fill="#EB001B"/><circle cx="20" cy="10" r="8" fill="#F79E1B" fill-opacity="0.8"/></svg>
                             </div>
-                            <span class="option-name">فيزا / ماستر كارد</span>
-                            <span class="option-check">✓</span>
+                            <span class="option-name">Credit / Debit Card <br><small style="font-weight: 500; font-size: 0.8rem; color: var(--text-light);">Temporarily Unavailable</small></span>
+                            <span class="option-check" style="color: var(--text-light);">🔒</span>
                         </a>
                         
-                        <div class="payment-option-divider"><span>أو ادفع بطرق محلية</span></div>
+                        <div class="payment-option-divider"><span>Or Pay Locally (Egypt)</span></div>
                         
                         <button class="payment-option vfcash-option" onclick="window.openPaymentModal('vfcash')">
                             <div class="option-brand">
                                 <div style="width: 32px; height: 32px; background: #e60000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; font-size: 14px;">V</div>
                             </div>
-                            <span class="option-name">فودافون كاش</span>
+                            <span class="option-name">Vodafone Cash</span>
                         </button>
                         
                         <button class="payment-option instapay-option" onclick="window.openPaymentModal('instapay')">
                             <div class="option-brand">
                                 <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #1d4ed8, #7c3aed); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; font-size: 14px;">IP</div>
                             </div>
-                            <span class="option-name">إنستا باي</span>
+                            <span class="option-name">InstaPay</span>
                         </button>
                     </div>
 
                     <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 24px;">
-                        جميع المعاملات مشفرة وآمنة بالكامل.
+                        All transactions are fully encrypted and secure.
                     </p>
                 </div>
 
                 <div class="trust-badge-container reveal" style="margin-top: 40px;">
-                    <div class="trust-badge">⭐ ضمان الرضا 100%</div>
-                    <div class="trust-badge">🚀 تفعيل فوري بعد الدفع</div>
-                    <div class="trust-badge">💬 دعم فني متواصل</div>
+                    <div class="trust-badge">⭐ 100% Satisfaction Guarantee</div>
+                    <div class="trust-badge">🚀 Immediate Access After Payment</div>
+                    <div class="trust-badge">💬 24/7 Priority Support</div>
                 </div>
             </div>
-        </div>
-        </div>
+        </article>
     </main>
 
     <!-- Footer -->
-    <footer style="padding: 60px 0; border-top: 1px solid var(--border-light); background: var(--bg);">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
-            <div style="max-width: 300px;">
-                <a href="index.html" class="logo" style="margin-bottom: 20px;">
-                    <span>Nexora</span>
+    <footer style="padding: 60px 0 20px; border-top: 1px solid var(--border-light); background: var(--bg);">
+        <div class="container section-padding"
+            style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-top: 0;">
+            <div style="max-width: 320px;">
+                <a href="/" class="logo" style="margin-bottom: 20px;">
+                    <span>Nexoura</span>
                 </a>
-                <p class="text-muted">بنساعدك تختصر الطريق وتبني مستقبلك في العمل الحر بأدوات ومنتجات رقمية مضمونة.</p>
+                <p class="text-muted">A premium digital products store & service agency for modern creators, freelancers, and small businesses.</p>
+                <div class="social-links" style="display: flex; gap: 15px; margin-top: 20px;">
+                    <a href="#" aria-label="Instagram" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+                    <a href="#" aria-label="Facebook" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="#" aria-label="Telegram" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></a>
+                </div>
             </div>
-            <div style="display: flex; gap: 80px;">
+
+            <div style="display: flex; gap: clamp(40px, 8vw, 80px); flex-wrap: wrap;">
                 <div>
-                    <h4 style="margin-bottom: 20px;">المتجر</h4>
-                    <ul style="display: grid; gap: 10px;" class="text-muted">
-                        <li><a href="browse.html">كل المنتجات</a></li>
-                        <li><a href="browse.html?cat=E-Books">كتب إلكترونية</a></li>
-                        <li><a href="browse.html?cat=Courses">كورسات</a></li>
+                    <h3 style="margin-bottom: 20px; font-size: 1.1rem; font-family:'Inter', sans-serif;">Marketplace</h3>
+                    <ul style="display: grid; gap: 12px;" class="text-muted">
+                        <li><a href="browse.html" class="nav-link" style="padding:0;">All Products</a></li>
+                        <li><a href="browse.html?cat=Templates" class="nav-link" style="padding:0;">Templates</a></li>
+                        <li><a href="browse.html?cat=UI Kits" class="nav-link" style="padding:0;">UI Kits</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 20px;">الدعم</h4>
-                    <ul style="display: grid; gap: 10px;" class="text-muted">
-                        <li><a href="contact.html">تواصل معنا</a></li>
-                        <li><a href="terms.html">الشروط والأحكام</a></li>
-                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    <h3 style="margin-bottom: 20px; font-size: 1.1rem; font-family:'Inter', sans-serif;">Legal & Trust</h3>
+                    <ul style="display: grid; gap: 12px;" class="text-muted">
+                        <li><a href="about.html" class="nav-link" style="padding:0;">About Us</a></li>
+                        <li><a href="contact.html" class="nav-link" style="padding:0;">Contact Us</a></li>
+                        <li><a href="refund.html" class="nav-link" style="padding:0;">Refund Policy</a></li>
+                        <li><a href="privacy.html" class="nav-link" style="padding:0;">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="nav-link" style="padding:0;">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border-light); text-align: center;">
-            <p class="text-muted" style="font-size: 0.85rem;">&copy; 2026 Nexora. جميع الحقوق محفوظة.</p>
+        <div class="container"
+            style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--border-light); text-align: center;">
+            <p class="text-muted" style="font-size: 0.85rem;">&copy; 2026 Nexoura. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Payment Instructions Modal -->
     <div id="payment-modal" class="modal-overlay">
         <div class="modal-content">
-            <button class="modal-close" onclick="window.closePaymentModal()">&times;</button>
+            <button class="modal-close" aria-label="Close Modal" onclick="window.closePaymentModal()">&times;</button>
             
             <div class="modal-header">
                 <div class="modal-icon" id="modal-icon">📱</div>
-                <h2 id="modal-title">الدفع عن طريق فودافون كاش</h2>
+                <h2 class="font-display" id="modal-title">Pay via Vodafone Cash</h2>
             </div>
             
             <div class="modal-body">
-                <p class="modal-instruction">حول المبلغ المطلوب على الرقم ده:</p>
+                <p class="modal-instruction">Transfer the required amount to this number:</p>
                 
                 <div class="amount-display">
-                    <span class="amount-label">المبلغ:</span>
+                    <span class="amount-label">Amount:</span>
                     <span class="amount-value" id="modal-amount">--</span>
                 </div>
                 
                 <div class="number-display">
-                    <span class="number-label" id="number-label">رقم الموبايل:</span>
+                    <span class="number-label" id="number-label">Mobile Number:</span>
                     <div class="number-copy-box">
                         <span class="number-value" id="modal-number">--</span>
-                        <button class="copy-btn" id="copy-btn" onclick="window.copyPaymentDetails()">نسخ</button>
+                        <button class="copy-btn" id="copy-btn" onclick="window.copyPaymentDetails()">Copy</button>
                     </div>
                 </div>
 
                 <div class="form-group" style="margin-top: 24px;">
-                    <label class="form-label" style="font-size: 0.85rem;">رقم هاتفك (عشان نبعتلك المنتج):</label>
+                    <label class="form-label" style="font-size: 0.85rem;">Your Phone Number (For file delivery):</label>
                     <input type="tel" id="customer-phone" class="form-input" placeholder="01xxxxxxxxx" style="border-radius: 8px;">
                 </div>
 
                 <div class="modal-steps">
-                    <h3>الخطوات اللي جاية:</h3>
+                    <h3>Next Steps:</h3>
                     <ol>
-                        <li>افتح تطبيق محفظتك وكمل عملية التحويل.</li>
-                        <li>خد سكرين شوت للعملية عشان تأكد الدفع.</li>
-                        <li>دوس على الزرار اللي تحت وابعت لنا السكرين شوت على واتساب.</li>
+                        <li>Open your wallet app and complete the transfer.</li>
+                        <li>Take a screenshot of the successful transaction.</li>
+                        <li>Click the button below and send us the screenshot on WhatsApp.</li>
                     </ol>
                 </div>
 
                 <a id="modal-whatsapp-btn" href="#" target="_blank" class="btn btn-whatsapp">
                     <span class="whatsapp-icon"></span>
-                    أكد الدفع على واتساب
+                    Confirm Payment on WhatsApp
                 </a>
             </div>
         </div>
     </div>
+    
+    <!-- Floating WhatsApp CTA -->
+    <a href="https://wa.me/201097207353" class="floating-whatsapp" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
 
     <script type="module" src="js/main.js"></script>
 </body>

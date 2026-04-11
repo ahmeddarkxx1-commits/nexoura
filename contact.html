@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا | نكسورا</title>
-    <meta name="description" content="عندك استفسار؟ احنا هنا عشان نساعدك. تواصل مع فريق نكسورا وهنرد عليك في أسرع وقت.">
-    <meta name="keywords" content="تواصل معنا, دعم فني نكسورا, استفسارات نكسورا">
+    <title>Contact Us | Nexoura</title>
+    <meta name="description" content="Get in touch with the Nexoura team. We provide 24/7 support for all our digital products, templates, and services.">
+    <meta name="keywords" content="contact nexoura, nexoura support, digital products help">
     <meta name="robots" content="index, follow">
 
     <!-- Favicon -->
@@ -35,6 +35,7 @@
             padding: 24px;
             border-radius: var(--inner-radius);
             border: 1px solid var(--border-light);
+            text-align: center;
         }
         .form-group {
             margin-bottom: 24px;
@@ -100,22 +101,22 @@
     <!-- Navigation -->
     <header class="header">
         <div class="container nav">
-            <a href="index.html" class="logo">
-                <span>Nexora</span>
+            <a href="/" class="logo" aria-label="Nexoura Home">
+                <span>Nexoura</span>
             </a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">الرئيسية</a>
-                <a href="browse.html" class="nav-link">المنتجات</a>
-                <a href="index.html#benefits" class="nav-link">ليه تختارنا؟</a>
-                <a href="index.html#faq" class="nav-link">أسئلة شائعة</a>
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="/" class="nav-link">Home</a>
+                <a href="browse.html" class="nav-link">Products</a>
+                <a href="/#services" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
             </nav>
             <div class="nav-actions">
                 <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
-                <a href="browse.html" class="btn btn-primary">شوف كل المنتجات</a>
-                <button id="menu-toggle" class="hamburger" aria-label="Open Menu">
+                <a href="browse.html" class="btn btn-primary">Browse All</a>
+                <button id="menu-toggle" class="hamburger" aria-label="Open Mobile Menu">
                     <span></span>
                     <span></span>
                 </button>
@@ -125,53 +126,62 @@
 
     <main class="container">
         <section class="contact-section">
-            <div class="reveal">
-                <h1>كلمنـا في أي وقت</h1>
-                <p class="text-muted">احنا موجودين عشان نجاوب على كل استفساراتك ونساعدك في رحلتك.</p>
+            <div class="reveal text-center">
+                <h1 class="font-display" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px;">Get In Touch</h1>
+                <p class="text-muted">We're here to answer every question and support you on your journey.</p>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-info reveal">
                     <div class="info-card">
-                        <h3 style="margin-bottom: 10px;">الإيميل</h3>
-                        <p class="text-muted">support@nexora.com</p>
+                        <div style="font-size: 2rem; margin-bottom: 10px;">📱</div>
+                        <h3 style="margin-bottom: 5px;">Direct Phone</h3>
+                        <div style="display: flex; flex-direction: column; gap:5px; margin-top: 10px;">
+                            <a href="tel:01097207353" style="color:var(--primary); font-weight: 600;">01097207353</a>
+                            <a href="tel:01152628515" style="color:var(--primary); font-weight: 600;">01152628515</a>
+                        </div>
                     </div>
                     <div class="info-card">
-                        <h3 style="margin-bottom: 10px;">واتساب</h3>
-                        <p class="text-muted">010xxxxxxxx</p>
+                        <div style="font-size: 2rem; margin-bottom: 10px;">💬</div>
+                        <h3 style="margin-bottom: 5px;">Live Chat</h3>
+                        <div style="display: flex; flex-direction: column; gap:10px; margin-top: 10px;">
+                            <a href="https://wa.me/201097207353" target="_blank" class="btn btn-secondary" style="background:var(--whatsapp); color:white; border:none; padding: 10px 15px;">WhatsApp</a>
+                            <a href="#" target="_blank" class="btn btn-secondary" style="background:#0088cc; color:white; border:none; padding: 10px 15px;">Telegram</a>
+                        </div>
                     </div>
                     <div class="info-card">
-                        <h3 style="margin-bottom: 10px;">ساعات العمل</h3>
-                        <p class="text-muted">كل يوم من 10 ص لـ 10 م</p>
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🕒</div>
+                        <h3 style="margin-bottom: 5px;">Business Hours</h3>
+                        <p class="text-muted">Mon - Fri <br> 9:00 AM - 6:00 PM</p>
                     </div>
                 </div>
 
                 <div class="contact-form reveal">
-                    <div data-fs-success>تم إرسال رسالتك بنجاح! شكراً لتواصلك معانا.</div>
-                    <div data-fs-error>حصلت مشكلة أثناء الإرسال، حاول تاني لو سمحت.</div>
+                    <div data-fs-success>Your message has been sent successfully! We will get back to you soon.</div>
+                    <div data-fs-error>An error occurred while sending. Please try again.</div>
 
                     <form id="contact-form">
                         <div class="form-group">
-                            <label class="form-label">الاسم الكامل</label>
-                            <input type="text" name="name" class="form-input" placeholder="اسمك الثنائي أو الثلاثي" required data-fs-field>
+                            <label class="form-label">Full Name</label>
+                            <input type="text" name="name" class="form-input" placeholder="e.g. John Doe" required data-fs-field>
                             <span data-fs-error="name" style="color: #991b1b; font-size: 0.8rem;"></span>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">البريد الإلكتروني</label>
+                            <label class="form-label">Email Address</label>
                             <input type="email" name="email" class="form-input" placeholder="name@example.com" required data-fs-field>
                             <span data-fs-error="email" style="color: #991b1b; font-size: 0.8rem;"></span>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">رقم الهاتف (واتساب)</label>
-                            <input type="tel" name="phone" class="form-input" placeholder="01xxxxxxxxx" required data-fs-field>
+                            <label class="form-label">Phone Number (WhatsApp)</label>
+                            <input type="tel" name="phone" class="form-input" placeholder="+1234567890" required data-fs-field>
                             <span data-fs-error="phone" style="color: #991b1b; font-size: 0.8rem;"></span>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">رسالتك</label>
-                            <textarea name="message" class="form-input" placeholder="إزاي نقدر نساعدك؟" required data-fs-field></textarea>
+                            <label class="form-label">Your Message</label>
+                            <textarea name="message" class="form-input" placeholder="How can we help you today?" required data-fs-field></textarea>
                             <span data-fs-error="message" style="color: #991b1b; font-size: 0.8rem;"></span>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-fs-submit-btn>إرسال الرسالة</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-fs-submit-btn>Send Message</button>
                     </form>
                 </div>
             </div>
@@ -179,37 +189,54 @@
     </main>
 
     <!-- Footer -->
-    <footer style="padding: 60px 0; border-top: 1px solid var(--border-light); background: var(--bg);">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
-            <div style="max-width: 300px;">
-                <a href="index.html" class="logo" style="margin-bottom: 20px;">
-                    <span>Nexora</span>
+    <footer style="padding: 60px 0 20px; border-top: 1px solid var(--border-light); background: var(--bg);">
+        <div class="container section-padding"
+            style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-top: 0;">
+            <div style="max-width: 320px;">
+                <a href="/" class="logo" style="margin-bottom: 20px;">
+                    <span>Nexoura</span>
                 </a>
-                <p class="text-muted">بنساعدك تختصر الطريق وتبني مستقبلك في العمل الحر بأدوات ومنتجات رقمية مضمونة.</p>
+                <p class="text-muted">A premium digital products store & service agency for modern creators, freelancers, and small businesses.</p>
+                <div class="social-links" style="display: flex; gap: 15px; margin-top: 20px;">
+                    <a href="#" aria-label="Instagram" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+                    <a href="#" aria-label="Facebook" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="#" aria-label="Telegram" style="color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></a>
+                </div>
             </div>
-            <div style="display: flex; gap: 80px;">
+
+            <div style="display: flex; gap: clamp(40px, 8vw, 80px); flex-wrap: wrap;">
                 <div>
-                    <h4 style="margin-bottom: 20px;">المتجر</h4>
-                    <ul style="display: grid; gap: 10px;" class="text-muted">
-                        <li><a href="browse.html">كل المنتجات</a></li>
-                        <li><a href="browse.html?cat=E-Books">كتب إلكترونية</a></li>
-                        <li><a href="browse.html?cat=Courses">كورسات</a></li>
+                    <h3 style="margin-bottom: 20px; font-size: 1.1rem; font-family:'Inter', sans-serif;">Marketplace</h3>
+                    <ul style="display: grid; gap: 12px;" class="text-muted">
+                        <li><a href="browse.html" class="nav-link" style="padding:0;">All Products</a></li>
+                        <li><a href="browse.html?cat=Templates" class="nav-link" style="padding:0;">Templates</a></li>
+                        <li><a href="browse.html?cat=UI Kits" class="nav-link" style="padding:0;">UI Kits</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="margin-bottom: 20px;">الدعم</h4>
-                    <ul style="display: grid; gap: 10px;" class="text-muted">
-                        <li><a href="contact.html">تواصل معنا</a></li>
-                        <li><a href="terms.html">الشروط والأحكام</a></li>
-                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                    <h3 style="margin-bottom: 20px; font-size: 1.1rem; font-family:'Inter', sans-serif;">Legal & Trust</h3>
+                    <ul style="display: grid; gap: 12px;" class="text-muted">
+                        <li><a href="about.html" class="nav-link" style="padding:0;">About Us</a></li>
+                        <li><a href="contact.html" class="nav-link" style="padding:0;">Contact Us</a></li>
+                        <li><a href="refund.html" class="nav-link" style="padding:0;">Refund Policy</a></li>
+                        <li><a href="privacy.html" class="nav-link" style="padding:0;">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="nav-link" style="padding:0;">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border-light); text-align: center;">
-            <p class="text-muted" style="font-size: 0.85rem;">&copy; 2026 Nexora. جميع الحقوق محفوظة.</p>
+        <div class="container"
+            style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--border-light); text-align: center;">
+            <p class="text-muted" style="font-size: 0.85rem;">&copy; 2026 Nexoura. All rights reserved.</p>
         </div>
     </footer>
+    
+    <!-- Floating WhatsApp CTA -->
+    <a href="https://wa.me/201097207353" class="floating-whatsapp" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
 
     <script type="module" src="js/main.js"></script>
     <script>
