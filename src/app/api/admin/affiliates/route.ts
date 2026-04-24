@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import connectDB from "@/lib/db";
 import Affiliate from "@/lib/models/Affiliate";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import { getLocal, saveLocal } from "@/lib/jsonStorage";
 
 export async function GET() {

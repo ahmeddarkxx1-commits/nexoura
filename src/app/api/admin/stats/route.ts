@@ -4,7 +4,7 @@ import Visit from "@/lib/models/Visit";
 import Referral from "@/lib/models/Referral";
 import Affiliate from "@/lib/models/Affiliate";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import { getLocal } from "@/lib/jsonStorage";
 
 export async function GET() {
