@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "pl1",
+    "name": "Standard",
+    "price": 149,
+    "description": "Perfect for small projects and startups looking for a professional start.",
+    "features": [
+      "5 Custom Web Pages",
+      "Responsive UI Design",
+      "Basic SEO Setup",
+      "Contact Form Integration",
+      "3 Months Support"
+    ],
+    "isPopular": false,
+    "isActive": true,
+    "createdAt": "2026-04-24T09:00:00Z",
+    "updatedAt": "2026-04-24T18:32:30.234Z"
+  },
+  {
+    "_id": "pl2",
+    "name": "Premium",
+    "price": 299,
+    "description": "Our most popular choice for growing businesses needing advanced features.",
+    "features": [
+      "Up to 15 Pages",
+      "Custom Animations",
+      "Full SEO Optimization",
+      "Payment Integration",
+      "Priority Support",
+      "CMS Dashboard"
+    ],
+    "isPopular": true,
+    "isActive": true,
+    "createdAt": "2026-04-24T09:30:00Z",
+    "updatedAt": "2026-04-24T18:32:27.526Z"
+  },
+  {
+    "_id": "pl3",
+    "name": "Enterprise",
+    "price": 599,
+    "description": "Scale your business with an elite digital experience and custom logic.",
+    "features": [
+      "Unlimited Pages",
+      "Advanced 3D Effects",
+      "Custom Backend API",
+      "Lifetime Security Updates",
+      "Dedicated Project Manager"
+    ],
+    "isPopular": false,
+    "isActive": true,
+    "createdAt": "2026-04-24T10:00:00Z",
+    "updatedAt": "2026-04-24T18:32:03.274Z"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "o1",
+    "clientName": "John Doe",
+    "clientEmail": "john@example.com",
+    "projectTitle": "Custom SaaS Dashboard",
+    "amount": 1200,
+    "status": "completed",
+    "createdAt": "2026-04-23T14:20:00Z"
+  },
+  {
+    "_id": "o2",
+    "clientName": "Sarah Smith",
+    "clientEmail": "sarah@startup.io",
+    "projectTitle": "Premium Web Plan",
+    "amount": 299,
+    "status": "pending",
+    "createdAt": "2026-04-24T08:45:00Z"
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "p1",
+    "title": "Quantum E-Commerce",
+    "description": "A high-performance online store with AI-driven recommendations and ultra-fast checkout.",
+    "images": [
+      "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800"
+    ],
+    "category": "E-Commerce",
+    "price": 2500,
+    "discount": 20,
+    "finalPrice": 2000,
+    "techStack": [
+      "Next.js",
+      "MongoDB",
+      "Stripe",
+      "Framer Motion"
+    ],
+    "features": [
+      "AI Product Recommendations",
+      "Real-time Inventory Management",
+      "Multi-currency Support",
+      "Advanced Analytics Dashboard",
+      "SEO Optimized Metadata"
+    ],
+    "useCase": "Best for scaling retail brands that need a high-conversion platform with modern aesthetics.",
+    "accentColor": "#8b5cf6",
+    "gradient": "from-violet-600/20 to-cyan-600/20",
+    "upsells": {
+      "customization": 499,
+      "hosting": 29,
+      "maintenance": 99
+    },
+    "isFeatured": true,
+    "isActive": true,
+    "createdAt": "2026-04-24T10:00:00Z"
+  },
+  {
+    "_id": "p2",
+    "title": "Stellar CRM",
+    "description": "Next-gen customer relationship management for modern agencies and service providers.",
+    "images": [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+    ],
+    "category": "SaaS",
+    "price": 1800,
+    "discount": 0,
+    "finalPrice": 1800,
+    "techStack": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind"
+    ],
+    "features": [
+      "Lead Tracking System",
+      "Automated Email Sequences",
+      "Team Collaboration Tools",
+      "Resource Planning Module"
+    ],
+    "useCase": "Designed for digital agencies that want to organize their workflow and client communication.",
+    "accentColor": "#3b82f6",
+    "gradient": "from-blue-600/20 to-indigo-600/20",
+    "upsells": {
+      "customization": 399,
+      "hosting": 19,
+      "maintenance": 49
+    },
+    "isFeatured": false,
+    "isActive": true,
+    "createdAt": "2026-04-24T11:00:00Z"
+  }
+]
