@@ -255,8 +255,8 @@ export default function HeroSection() {
 
       {/* Layer FAR */}
       <motion.div className="absolute inset-0 pointer-events-none hidden lg:block" style={{ x: farX, y: farY }}>
-        <StatBadge value="150+" label="Projects" gradient="linear-gradient(135deg,#00d4ff,#3b82f6)" style={{ top: "18%", left: "5%" }} delay={0.8} />
-        <TechPill icon={Globe} label="Next.js 15" style={{ bottom: "28%", left: "4%" }} delay={1.9} />
+        <StatBadge value="84+" label="Handcrafted" gradient="linear-gradient(135deg,#0ea5e9,#3b82f6)" style={{ top: "15%", left: "8%" }} delay={0.8} />
+        <TechPill icon={Globe} label="Next.js 15" style={{ bottom: "32%", left: "6%" }} delay={1.9} />
       </motion.div>
 
       {/* Layer MID */}
@@ -267,15 +267,15 @@ export default function HeroSection() {
 
       {/* Layer NEAR */}
       <motion.div className="absolute inset-0 pointer-events-none hidden lg:block" style={{ x: nearX, y: nearY }}>
-        <NotifCard style={{ top: "18%", right: "4%" }} />
-        <StatBadge value="$2M+" label="Revenue" gradient="linear-gradient(135deg,#8b5cf6,#ec4899)" style={{ bottom: "26%", left: "6%" }} delay={1.3} />
-        <TechPill icon={Layers} label="Framer Motion" style={{ top: "40%", right: "3%" }} delay={2.3} />
+        <NotifCard style={{ top: "20%", right: "6%" }} />
+        <StatBadge value="< 2h" label="Response" gradient="linear-gradient(135deg,#7c3aed,#db2777)" style={{ bottom: "24%", left: "10%" }} delay={1.3} />
+        <TechPill icon={Layers} label="Framer Motion" style={{ top: "42%", right: "5%" }} delay={2.3} />
       </motion.div>
 
       {/* Layer CLOSE */}
       <motion.div className="absolute inset-0 pointer-events-none hidden lg:block" style={{ x: closeX, y: closeY }}>
-        <StatBadge value="98%" label="Satisfaction" gradient="linear-gradient(135deg,#10b981,#06b6d4)" style={{ top: "62%", right: "5%" }} delay={1} />
-        <TechPill icon={Code2} label="TypeScript" style={{ top: "74%", left: "3%" }} delay={2.6} />
+        <StatBadge value="98%" label="Satisfaction" gradient="linear-gradient(135deg,#10b981,#0ea5e9)" style={{ top: "65%", right: "8%" }} delay={1} />
+        <TechPill icon={Code2} label="TypeScript" style={{ top: "78%", left: "5%" }} delay={2.6} />
       </motion.div>
 
       {/* Main content */}
@@ -283,33 +283,18 @@ export default function HeroSection() {
         className="relative z-10 max-w-5xl mx-auto px-6 text-center"
         style={{ y: titleY, opacity: titleOpacity }}
       >
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-10"
-        >
-          <motion.div
-            className="w-1.5 h-1.5 rounded-full bg-cyan-400"
-            animate={{ scale: [1, 1.6, 1], opacity: [1, 0.4, 1] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          />
-          <span className="text-[11px] text-cyan-300 font-semibold tracking-[0.2em] uppercase">Premium Digital Agency</span>
-          <Sparkles size={11} className="text-violet-400" />
-        </motion.div>
 
         {/* Staggered headline */}
-        <h1 className="section-heading mb-6">
-          {["Building Digital", "Experiences That Sell"].map((line, i) => (
+        <h1 className="section-heading mb-8 leading-[1.2]">
+          {["Handcrafted Digital", "Products for Modern Brands"].map((line, i) => (
             <div key={line} style={{ overflow: "hidden" }}>
               <motion.div
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
-                transition={{ delay: 0.2 + i * 0.15, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: 0.3 + i * 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <MagneticWord>
-                  <span className={i === 0 ? "block text-white" : "block text-gradient"}>{line}</span>
+                  <span className={i === 0 ? "block text-white/90" : "block text-gradient"}>{line}</span>
                 </MagneticWord>
               </motion.div>
             </div>
@@ -319,11 +304,11 @@ export default function HeroSection() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="section-sub max-w-xl mx-auto mb-10"
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="section-sub max-w-2xl mx-auto mb-12 text-slate-400 leading-relaxed"
         >
-          Websites, Apps, and Ready-Made Solutions crafted for brands that demand the extraordinary.
-          We don&apos;t build websites — we build digital empires.
+          Specializing in bespoke websites and apps for companies, gyms, and stores.
+          We combine intentional design with high-performance code to help your business scale.
         </motion.p>
 
         <motion.div

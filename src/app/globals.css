@@ -2,14 +2,15 @@
 
 @layer base {
   :root {
-    --neon-blue: #00d4ff;
-    --neon-purple: #8b5cf6;
-    --neon-pink: #ec4899;
-    --dark-bg: #020408;
-    --dark-card: #0d1117;
-    --dark-border: rgba(139, 92, 246, 0.2);
-    --glow-blue: 0 0 40px rgba(0, 212, 255, 0.3);
-    --glow-purple: 0 0 40px rgba(139, 92, 246, 0.3);
+    --neon-blue: #0ea5e9;
+    --neon-purple: #7c3aed;
+    --neon-pink: #db2777;
+    --dark-bg: #030712;
+    --dark-card: #0a0f1d;
+    --dark-border: rgba(124, 58, 237, 0.12);
+    --glow-blue: 0 4px 20px rgba(14, 165, 233, 0.15);
+    --glow-purple: 0 4px 20px rgba(124, 58, 237, 0.15);
+    --handcrafted-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   }
 
   * {
@@ -66,11 +67,20 @@
   }
 
   .glow-blue {
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.25), 0 0 60px rgba(0, 212, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15), 0 10px 40px rgba(14, 165, 233, 0.05);
   }
 
   .glow-purple {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3), 0 0 60px rgba(139, 92, 246, 0.1);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.2), 0 10px 40px rgba(124, 58, 237, 0.05);
+  }
+
+  .soft-shadow {
+    box-shadow: var(--handcrafted-shadow);
+  }
+
+  .handcrafted-border {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
   }
 
   .text-gradient {
@@ -164,17 +174,22 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #00d4ff, #8b5cf6);
+    background: linear-gradient(135deg, #0ea5e9, #7c3aed);
     color: #fff;
     font-weight: 600;
-    padding: 14px 32px;
-    border-radius: 50px;
+    padding: 14px 34px;
+    border-radius: 12px; /* Less generic than fully round */
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.96);
   }
 
   .btn-primary::before {
@@ -196,15 +211,19 @@
   }
 
   .btn-secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03);
     color: #e2e8f0;
     font-weight: 600;
-    padding: 13px 31px;
-    border-radius: 50px;
-    border: 1px solid rgba(139, 92, 246, 0.4);
+    padding: 13px 33px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 0.02em;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: 0.01em;
+  }
+
+  .btn-secondary:active {
+    transform: scale(0.96);
   }
 
   .btn-secondary:hover {

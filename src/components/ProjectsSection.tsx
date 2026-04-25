@@ -96,43 +96,39 @@ function StaggeredGrid({ projects }: { projects: Project[] }) {
   const [featured, ...rest] = projects;
 
   return (
-    <div className="space-y-6">
-      {/* Row 1: featured (wide) + first two regular */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
-        {/* Featured card spans 2 cols and is taller */}
-        <div className="lg:col-span-2">
+    <div className="space-y-12">
+      {/* Row 1: Featured (Large) + Side Card */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Featured card spans 8 cols */}
+        <div className="lg:col-span-8">
           <ProjectCard project={featured} index={0} featured={true} />
         </div>
 
-        {/* First regular card — offset down on desktop */}
+        {/* Offset side card */}
         {rest[0] && (
-          <div className="lg:mt-24">
+          <div className="lg:col-span-4 lg:mt-32">
             <ProjectCard project={rest[0]} index={1} />
           </div>
         )}
       </div>
 
-      {/* Row 2: regular cards — column 1 flush, columns 2/3 offset up */}
+      {/* Row 2: Humanized Grid (Non-strict) */}
       {rest.length > 1 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-          {rest.slice(1).map((project, i) => (
-            <div
-              key={project.id}
-              style={{
-                marginTop:
-                  i === 0
-                    ? "32px"
-                    : i === 1
-                    ? "-48px"
-                    : i === 2
-                    ? "-24px"
-                    : "0px",
-              }}
-              className="hidden-on-small"
-            >
-              <ProjectCard project={project} index={i + 2} />
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-start">
+          {rest.slice(1).map((project, i) => {
+            // Random-ish vertical offsets to break the grid feel
+            const offsets = ["mt-0", "lg:-mt-16", "lg:mt-8", "lg:-mt-24", "lg:mt-12"];
+            const offsetClass = offsets[i % offsets.length];
+            
+            return (
+              <div
+                key={project.id}
+                className={`${offsetClass} transition-all duration-700`}
+              >
+                <ProjectCard project={project} index={i + 2} />
+              </div>
+            );
+          })}
         </div>
       )}
     </div>

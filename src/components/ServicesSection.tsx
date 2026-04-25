@@ -64,12 +64,12 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
           service.isPopular ? "ring-1 ring-violet-500/50" : "glass-card"
         }`}
       >
-        {/* Cursor glow */}
+        {/* Cursor glow (Softer) */}
         <div
-          className="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-300 z-0"
+          className="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-500 z-0"
           style={{
             opacity: hovered ? 1 : 0,
-            background: `radial-gradient(300px circle at ${glow.x}px ${glow.y}px, ${accentColor}25, transparent 70%)`,
+            background: `radial-gradient(400px circle at ${glow.x}px ${glow.y}px, ${accentColor}10, transparent 70%)`,
           }}
         />
 
@@ -98,10 +98,10 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
 
           <div className="flex items-center justify-between mb-6">
             <div
-              className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-lg transition-transform duration-500"
+              className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-lg transition-transform duration-500"
               style={{
-                background: `linear-gradient(135deg, ${accentColor}, ${accentColor}88)`,
-                boxShadow: `0 0 30px ${accentColor}44`,
+                background: `linear-gradient(135deg, ${accentColor}, ${accentColor}aa)`,
+                boxShadow: `0 10px 20px -5px ${accentColor}33`,
                 transform: hovered ? "scale(1.1) rotate(5deg)" : "scale(1)",
               }}
             >
@@ -143,14 +143,14 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
 
           <a
             href="#contact"
-            className={`block text-center py-3 rounded-2xl font-bold text-sm transition-all duration-300 ${
+            className={`block text-center py-3.5 rounded-xl font-bold text-sm transition-all duration-400 ${
               service.isPopular
-                ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:shadow-lg hover:shadow-violet-500/40"
-                : "glass text-white hover:bg-white/10 border border-white/10"
+                ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-violet-500/20 active:scale-95"
+                : "glass text-white hover:bg-white/5 border border-white/10 active:scale-95"
             }`}
             style={{ transform: hovered ? "translateZ(10px)" : "none" }}
           >
-            {service.buttonText || "Get Started"} →
+            {service.buttonText || "Get Started"}
           </a>
         </div>
       </motion.div>
@@ -205,10 +205,18 @@ export default function ServicesSection() {
              <div className="w-10 h-10 border-4 border-violet-500/20 border-t-violet-500 rounded-full animate-spin" />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6">
-            {plans.map((service, i) => (
-              <ServiceCard key={service._id} service={service} index={i} />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-12">
+            {plans.map((service, i) => {
+              // Asymmetrical vertical offsets
+              const offsets = ["lg:mt-0", "lg:-mt-12", "lg:mt-8"];
+              const offsetClass = offsets[i % offsets.length];
+              
+              return (
+                <div key={service._id} className={offsetClass}>
+                  <ServiceCard service={service} index={i} />
+                </div>
+              );
+            })}
             {plans.length === 0 && (
               <p className="col-span-full text-center py-20 text-slate-500">No active plans found.</p>
             )}

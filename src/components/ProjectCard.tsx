@@ -94,14 +94,17 @@ export default function ProjectCard({
         whileHover={{ scale: 1.04, z: 20 }}
         transition={{ scale: { duration: 0.3, ease: "easeOut" }, z: { duration: 0.3 } }}
       >
-        {/* Cursor-follow glow */}
+        {/* Cursor-follow glow (Softer and more subtle) */}
         <div
-          className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-300 z-10"
+          className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500 z-10"
           style={{
             opacity: hovered ? 1 : 0,
-            background: `radial-gradient(280px circle at ${glow.x}px ${glow.y}px, ${accentColor}28, transparent 65%)`,
+            background: `radial-gradient(400px circle at ${glow.x}px ${glow.y}px, ${accentColor}12, transparent 70%)`,
           }}
         />
+
+        {/* Subtle Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-20 mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
         {/* Shine sweep */}
         <motion.div
@@ -113,15 +116,15 @@ export default function ProjectCard({
           }}
         />
 
-        {/* Border glow on hover */}
+        {/* Handcrafted shadow and border */}
         <motion.div
           className="absolute inset-0 rounded-2xl pointer-events-none z-20"
           animate={{
             boxShadow: hovered
-              ? `inset 0 0 0 2px ${accentColor}88, 0 20px 60px ${accentColor}30`
-              : `inset 0 0 0 1px rgba(139,92,246,0.15)`,
+              ? `0 30px 60px -12px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1)`
+              : `0 10px 30px -10px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.05)`,
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         />
 
           {/* Card visual */}

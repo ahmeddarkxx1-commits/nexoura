@@ -23,10 +23,10 @@ function Shape({
     if (!ref.current || !meshRef.current) return;
     const t = state.clock.getElapsedTime() + rotOffset;
     
-    // Idle rotation
-    meshRef.current.rotation.x = Math.sin(t * speed * 0.4) * 0.6;
-    meshRef.current.rotation.y = t * speed * 0.3;
-    meshRef.current.rotation.z = Math.cos(t * speed * 0.2) * 0.3;
+    // Idle rotation (Slowed down and made more subtle)
+    meshRef.current.rotation.x = Math.sin(t * speed * 0.2) * 0.4;
+    meshRef.current.rotation.y = t * speed * 0.15;
+    meshRef.current.rotation.z = Math.cos(t * speed * 0.1) * 0.2;
     
     // Mouse parallax and rotation
     const targetX = (mouse.x * 1.5);
@@ -37,8 +37,8 @@ function Shape({
     // Depth shift (z-axis illusion)
     ref.current.position.z = THREE.MathUtils.lerp(ref.current.position.z, position[2] + (mouse.x * mouse.y) * 2, 0.05);
     
-    meshRef.current.rotation.x += mouse.y * 0.4;
-    meshRef.current.rotation.y += mouse.x * 0.4;
+    meshRef.current.rotation.x += mouse.y * 0.2;
+    meshRef.current.rotation.y += mouse.x * 0.2;
   });
 
   const Geo = () => {
@@ -61,13 +61,13 @@ function Shape({
           <MeshDistortMaterial
             color={color}
             emissive={color}
-            emissiveIntensity={0.3}
-            metalness={0.9}
-            roughness={0.1}
+            emissiveIntensity={0.15} /* Reduced from 0.3 */
+            metalness={0.8}
+            roughness={0.2}
             distort={distort}
-            speed={speed * 2}
+            speed={speed * 1.5}
             transparent
-            opacity={0.85}
+            opacity={0.8}
           />
         </mesh>
       </Float>
@@ -82,11 +82,11 @@ function Scene() {
       <pointLight position={[6, 4, 4]} intensity={3} color="#8b5cf6" />
       <pointLight position={[-6, -4, 3]} intensity={2} color="#00d4ff" />
       <pointLight position={[0, 0, 6]} intensity={0.8} color="#ec4899" />
-      <Shape position={[-4.5, 1.2, -3]} scale={1.2} color="#8b5cf6" distort={0.3} speed={0.5} rotOffset={0} geo="ico" />
-      <Shape position={[4.2, -0.8, -4]} scale={0.95} color="#06b6d4" distort={0.2} speed={0.35} rotOffset={2} geo="torusKnot" />
-      <Shape position={[-2.8, -2.2, -2]} scale={0.8} color="#7c3aed" distort={0.4} speed={0.65} rotOffset={4} geo="oct" />
-      <Shape position={[3.2, 2.4, -5]} scale={1.4} color="#1d4ed8" distort={0.12} speed={0.22} rotOffset={1} geo="sphere" />
-      <Shape position={[0.8, -3, -4.5]} scale={0.9} color="#6d28d9" distort={0.28} speed={0.42} rotOffset={3} geo="torus" />
+      <Shape position={[-4.8, 1.4, -3.5]} scale={1.2} color="#7c3aed" distort={0.2} speed={0.3} rotOffset={0} geo="ico" />
+      <Shape position={[4.5, -0.6, -4.5]} scale={0.95} color="#0ea5e9" distort={0.15} speed={0.25} rotOffset={2} geo="torusKnot" />
+      <Shape position={[-3.2, -2.5, -2.5]} scale={0.8} color="#6d28d9" distort={0.25} speed={0.4} rotOffset={4} geo="oct" />
+      <Shape position={[3.5, 2.8, -5.5]} scale={1.4} color="#2563eb" distort={0.1} speed={0.15} rotOffset={1} geo="sphere" />
+      <Shape position={[1.2, -3.4, -5]} scale={0.9} color="#4c1d95" distort={0.2} speed={0.3} rotOffset={3} geo="torus" />
     </>
   );
 }

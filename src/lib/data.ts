@@ -7,7 +7,7 @@ export const projects: Project[] = [
     category: "Landing Page",
     price: 199,
     customPrice: 599,
-    description: "A premium dark-themed fitness coaching platform with custom training packages, integrated WhatsApp lead generation, and dynamic transformation galleries.",
+    description: "A professional fitness coaching platform for elite trainers. Features dynamic training packages and WhatsApp lead capture with a clean, high-performance layout.",
     tags: ["React", "Tailwind", "Vite"],
     gradient: "from-zinc-900 to-black",
     accentColor: "#22c55e",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     category: "E-commerce",
     price: 299,
     customPrice: 799,
-    description: "A premium e-commerce platform with AI-powered recommendations, seamless checkout, and a stunning dark luxury aesthetic for high-conversion brands.",
+    description: "A high-conversion e-commerce storefront designed for luxury brands. Includes a streamlined checkout flow and a focus on visual storytelling.",
     tags: ["Next.js", "Stripe", "MongoDB"],
     gradient: "from-violet-600 to-indigo-600",
     accentColor: "#8b5cf6",
@@ -219,8 +219,21 @@ export const services: Service[] = [
 ];
 
 export const stats: Stat[] = [
-  { label: "Projects Delivered", value: "150+", suffix: "" },
-  { label: "Client Satisfaction", value: "99%", suffix: "" },
-  { label: "Revenue Generated", value: "$2M+", suffix: "" },
-  { label: "Countries Served", value: "24", suffix: "" },
+  { label: "Projects Handcrafted", value: "84", suffix: "+" },
+  { label: "Avg. Response Time", value: "2", suffix: "h" },
+  { label: "Industries Served", value: "12", suffix: "+" },
+  { label: "Client Satisfaction", value: "98", suffix: "%" },
+];
+
+export const testimonials = [
+  {
+    name: "Omar F.",
+    role: "Gym Owner",
+    content: "Nexoura transformed our local gym's presence into a digital powerhouse. The attention to detail is insane.",
+  },
+  {
+    name: "Sarah M.",
+    role: "Retail Brand Manager",
+    content: "Fast, reliable, and actually cares about the business results, not just the code. Highly recommended.",
+  },
 ];

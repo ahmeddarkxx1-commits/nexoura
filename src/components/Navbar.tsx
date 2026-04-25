@@ -80,7 +80,7 @@ export default function Navbar() {
             background: useMotionTemplate`
               radial-gradient(
                 200px circle at ${mouseX}px ${mouseY}px,
-                rgba(139, 92, 246, 0.15),
+                rgba(124, 58, 237, 0.08),
                 transparent 80%
               )
             `,
@@ -122,16 +122,12 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 relative">
             <motion.div 
-              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center glow-purple relative"
+              className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center relative"
             >
-              <motion.div 
-                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-violet-600 rounded-xl blur-md -z-10"
-              />
-              <Zap size={18} className="text-white relative z-10 drop-shadow-md" />
+              <div className="absolute inset-0 bg-violet-600/20 rounded-xl blur-sm -z-10" />
+              <Zap size={18} className="text-white relative z-10" />
             </motion.div>
             <span className="text-xl font-black tracking-tight text-gradient">
               Nexoura
@@ -173,19 +169,14 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link href="#contact">
               <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative group/btn px-6 py-2.5 rounded-full overflow-hidden font-semibold text-sm text-white border-0"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="relative group/btn px-6 py-2 rounded-xl overflow-hidden font-bold text-sm text-white"
+                style={{ background: "linear-gradient(135deg, #0ea5e9, #7c3aed)" }}
               >
-                {/* Background layers */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-violet-600 transition-transform duration-300 group-hover/btn:scale-105" />
-                <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/30 to-transparent transition-opacity duration-500" />
-                
-                {/* Border glow */}
-                <div className="absolute inset-[-2px] bg-gradient-to-r from-cyan-400 to-violet-500 rounded-full blur-md opacity-40 group-hover/btn:opacity-80 transition-opacity duration-300 -z-10" />
-                
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
                 <span className="relative flex items-center gap-2">
-                  <Zap size={14} className="text-cyan-200" />
+                  <Zap size={14} className="text-white/80" />
                   Start Project
                 </span>
               </motion.button>

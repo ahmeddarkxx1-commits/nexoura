@@ -113,8 +113,8 @@ export default function RequestSection() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="section-sub max-w-lg mx-auto">
-              Tell us about your project. We&apos;ll respond via WhatsApp within 24 hours.
+            <p className="section-sub max-w-xl mx-auto">
+              Ready to start? Tell us about your vision. We typically respond via WhatsApp within 2 hours.
             </p>
           </ScrollReveal>
         </div>
@@ -175,8 +175,8 @@ export default function RequestSection() {
                           onFocus={() => setFocusedField('name')}
                           onBlur={() => setFocusedField(null)}
                           onChange={(e) => handleChange("name", e.target.value)}
-                          className={`w-full bg-white/5 border rounded-2xl px-5 py-4 text-white text-sm placeholder-slate-600 focus:outline-none transition-all duration-300 ${
-                            focusedField === 'name' ? 'border-pink-500/50 shadow-[0_0_20px_rgba(236,72,153,0.15)] bg-white/10' : 'border-white/10'
+                          className={`w-full bg-white/5 border rounded-xl px-5 py-4 text-white text-sm placeholder-slate-600 focus:outline-none transition-all duration-300 ${
+                            focusedField === 'name' ? 'border-pink-500/30 bg-white/10' : 'border-white/5'
                           }`}
                         />
                       </div>
@@ -268,20 +268,17 @@ export default function RequestSection() {
                     <div className="pt-4">
                       <motion.button
                         onClick={handleWhatsApp}
-                        whileHover={form.name && form.projectType && form.budget ? { scale: 1.02 } : {}}
-                        whileTap={form.name && form.projectType && form.budget ? { scale: 0.98 } : {}}
+                        whileHover={form.name && form.projectType && form.budget ? { scale: 1.01 } : {}}
+                        whileTap={form.name && form.projectType && form.budget ? { scale: 0.99 } : {}}
                         disabled={!form.name || !form.projectType || !form.budget}
-                        className="w-full relative group overflow-hidden rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full relative group overflow-hidden rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-violet-600 to-cyan-600 group-hover:opacity-100 opacity-90 transition-opacity" />
-                        
-                        {/* Shimmer effect */}
-                        <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-violet-600 opacity-90 transition-opacity" />
                         
                         <div className="relative py-4 px-6 flex items-center justify-center gap-3 text-white font-bold text-lg">
                           {tracking ? <Loader2 size={22} className="animate-spin" /> : <MessageCircle size={22} />}
-                          <span>{tracking ? 'Processing...' : 'Start Your Project on WhatsApp'}</span>
-                          {!tracking && <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+                          <span>{tracking ? 'Processing...' : 'Send WhatsApp Message'}</span>
+                          {!tracking && <Send size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />}
                         </div>
                       </motion.button>
                       <p className="text-xs font-medium text-center text-slate-500 mt-4 flex items-center justify-center gap-1.5">
