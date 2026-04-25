@@ -69,5 +69,35 @@
     "isFeatured": false,
     "isActive": true,
     "createdAt": "2026-04-24T11:00:00Z"
+  },
+  {
+    "title": "AquaCRM Pro",
+    "price": 799,
+    "discount": 25,
+    "category": "website",
+    "description": "A high-performance CRM for marine businesses.",
+    "previewLink": "",
+    "techStack": [],
+    "isActive": true,
+    "isFeatured": false,
+    "finalPrice": 599.25,
+    "images": [],
+    "_id": "1777141318266",
+    "createdAt": "2026-04-25T18:21:58.266Z"
+  },
+  {
+    "title": "LuxeOcean Store",
+    "price": 1200,
+    "discount": 10,
+    "category": "website",
+    "description": "Premium e-commerce for luxury aquatic goods.",
+    "previewLink": "",
+    "techStack": [],
+    "isActive": true,
+    "isFeatured": false,
+    "finalPrice": 1080,
+    "images": [],
+    "_id": "1777141390676",
+    "createdAt": "2026-04-25T18:23:10.676Z"
   }
 ]

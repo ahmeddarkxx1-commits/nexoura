@@ -3,15 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
-import { LayoutDashboard, Package, CreditCard, ShoppingCart, LogOut, Hexagon, Users } from "lucide-react";
+import { LayoutDashboard, Package, CreditCard, ShoppingCart, LogOut, Hexagon, Users, Folder } from "lucide-react";
 import { motion } from "framer-motion";
 
 const navItems = [
   { name: "Overview", href: "/admin", icon: LayoutDashboard },
+  { name: "Projects", href: "/admin/projects", icon: Folder },
   { name: "Products", href: "/admin/products", icon: Package },
   { name: "Plans", href: "/admin/plans", icon: CreditCard },
   { name: "Orders", href: "/admin/orders", icon: ShoppingCart },
   { name: "Affiliates", href: "/admin/affiliates", icon: Users },
+  { name: "Settings", href: "/admin/settings", icon: Hexagon },
 ];
 
 export default function Sidebar() {

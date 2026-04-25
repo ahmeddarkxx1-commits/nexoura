@@ -50,5 +50,31 @@
     "isActive": true,
     "createdAt": "2026-04-24T10:00:00Z",
     "updatedAt": "2026-04-24T18:32:03.274Z"
+  },
+  {
+    "name": "Shoreline Plan",
+    "price": 199,
+    "description": "Basic essentials.",
+    "isPopular": false,
+    "isActive": true,
+    "buttonText": "Get Started",
+    "features": [
+      "1 Landing Page"
+    ],
+    "_id": "1777141439741",
+    "createdAt": "2026-04-25T18:23:59.741Z"
+  },
+  {
+    "name": "DeepOcean Plan",
+    "price": 1499,
+    "description": "Full enterprise solution.",
+    "isPopular": false,
+    "isActive": true,
+    "buttonText": "Get Started",
+    "features": [
+      "Unlimited Pages"
+    ],
+    "_id": "1777141515851",
+    "createdAt": "2026-04-25T18:25:15.851Z"
   }
 ]
