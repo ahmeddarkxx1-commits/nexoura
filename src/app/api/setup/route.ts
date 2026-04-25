@@ -8,21 +8,21 @@ export async function GET() {
   try {
     await connectDB();
 
-    const existingAdmin = await User.findOne({ email: "admin@nexoura.com" });
+    const existingAdmin = await User.findOne({ email: "ahmed@nexoura.com" });
     if (existingAdmin) {
       return NextResponse.json({ message: "Admin user already exists" });
     }
 
-    const hashedPassword = await bcrypt.hash("admin123", 10);
+    const hashedPassword = await bcrypt.hash("NexouraAdmin2026!", 10);
     
     await User.create({
       name: "Super Admin",
-      email: "admin@nexoura.com",
+      email: "ahmed@nexoura.com",
       password: hashedPassword,
       role: "admin"
     });
 
-    return NextResponse.json({ message: "Admin user created successfully. Email: admin@nexoura.com, Password: admin123" });
+    return NextResponse.json({ message: "Admin user created successfully. Email: ahmed@nexoura.com, Password: NexouraAdmin2026!" });
   } catch (error) {
     console.error("Setup API Error:", error);
     return NextResponse.json({ error: "Error creating admin user" }, { status: 500 });

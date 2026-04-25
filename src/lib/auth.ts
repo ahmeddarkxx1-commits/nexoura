@@ -17,8 +17,8 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Invalid credentials");
         }
 
-        if (credentials.email === "admin@nexoura.com" && credentials.password === "password123") {
-          return { id: "1", name: "Admin", email: "admin@nexoura.com", role: "admin" };
+        if (credentials.email === "ahmed@nexoura.com" && credentials.password === "NexouraAdmin2026!") {
+          return { id: "1", name: "Admin", email: "ahmed@nexoura.com", role: "admin" };
         }
 
         await connectDB();
@@ -59,5 +59,5 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: "/admin/login",
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET || "nexoura_secret_321",
 };
