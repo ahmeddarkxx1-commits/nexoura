@@ -17,7 +17,7 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Invalid credentials");
         }
 
-        if (credentials.email === "ahmed@nexoura.com" && credentials.password === "NexouraAdmin2026!") {
+        if (credentials.email.toLowerCase() === "ahmed@nexoura.com" && credentials.password === "NexouraAdmin2026!") {
           return { id: "1", name: "Admin", email: "ahmed@nexoura.com", role: "admin" };
         }
 
