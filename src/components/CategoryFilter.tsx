@@ -22,7 +22,7 @@ export default function CategoryFilter({ active, onChange }: CategoryFilterProps
             className="relative px-5 py-2 rounded-full text-sm font-semibold transition-colors"
             style={{
               color: isActive ? "#fff" : "rgba(148,163,184,0.8)",
-              border: isActive ? "none" : "1px solid rgba(139,92,246,0.2)",
+              border: isActive ? "none" : "1px solid rgba(0,119,182,0.2)",
             }}
           >
             {isActive && (
@@ -30,7 +30,7 @@ export default function CategoryFilter({ active, onChange }: CategoryFilterProps
                 layoutId="filter-pill"
                 className="absolute inset-0 rounded-full"
                 style={{
-                  background: "linear-gradient(135deg, #00d4ff, #8b5cf6)",
+                  background: "linear-gradient(135deg, #0077b6, #00b4d8)",
                 }}
                 transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
               />

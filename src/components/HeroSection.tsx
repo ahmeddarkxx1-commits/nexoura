@@ -90,7 +90,7 @@ function TechPill({ icon: Icon, label, style, delay = 0 }: {
 }
 
 function AvatarRow({ style }: { style?: React.CSSProperties }) {
-  const g = ["from-violet-500 to-purple-700", "from-cyan-500 to-blue-600", "from-rose-500 to-pink-600", "from-amber-500 to-orange-600"];
+  const g = ["from-blue-600 to-blue-800", "from-cyan-500 to-cyan-700", "from-sky-500 to-sky-700", "from-teal-500 to-teal-700"];
   return (
     <motion.div
       className="absolute glass-card rounded-2xl p-3 flex items-center gap-3 select-none pointer-events-none"
@@ -198,7 +198,7 @@ export default function HeroSection() {
       <motion.div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ x: gridX, y: gridY }}>
         <motion.div className="absolute rounded-full" style={{
           width: 700, height: 700,
-          background: "radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 65%)",
           left: -200, top: -250,
           x: spot1X, y: spot1Y,
         }} />
@@ -213,7 +213,7 @@ export default function HeroSection() {
           animate={{ backgroundPosition: ["0px 0px", "70px 70px"] }}
           transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
           style={{
-            backgroundImage: `linear-gradient(rgba(139,92,246,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.06) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(0,119,182,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,119,182,0.08) 1px, transparent 1px)`,
             backgroundSize: "70px 70px",
             maskImage: "radial-gradient(ellipse 70% 60% at 50% 20%, black 20%, transparent 100%)",
         }} />
@@ -255,7 +255,7 @@ export default function HeroSection() {
 
       {/* Layer FAR */}
       <motion.div className="absolute inset-0 pointer-events-none hidden lg:block" style={{ x: farX, y: farY }}>
-        <StatBadge value="84+" label="Handcrafted" gradient="linear-gradient(135deg,#0ea5e9,#3b82f6)" style={{ top: "15%", left: "8%" }} delay={0.8} />
+        <StatBadge value="84+" label="Handcrafted" gradient="linear-gradient(135deg,#0077b6,#00b4d8)" style={{ top: "15%", left: "8%" }} delay={0.8} />
         <TechPill icon={Globe} label="Next.js 15" style={{ bottom: "32%", left: "6%" }} delay={1.9} />
       </motion.div>
 
@@ -268,13 +268,13 @@ export default function HeroSection() {
       {/* Layer NEAR */}
       <motion.div className="absolute inset-0 pointer-events-none hidden lg:block" style={{ x: nearX, y: nearY }}>
         <NotifCard style={{ top: "20%", right: "6%" }} />
-        <StatBadge value="< 2h" label="Response" gradient="linear-gradient(135deg,#7c3aed,#db2777)" style={{ bottom: "24%", left: "10%" }} delay={1.3} />
+        <StatBadge value="< 2h" label="Response" gradient="linear-gradient(135deg,#00b4d8,#00d4ff)" style={{ bottom: "24%", left: "10%" }} delay={1.3} />
         <TechPill icon={Layers} label="Framer Motion" style={{ top: "42%", right: "5%" }} delay={2.3} />
       </motion.div>
 
       {/* Layer CLOSE */}
       <motion.div className="absolute inset-0 pointer-events-none hidden lg:block" style={{ x: closeX, y: closeY }}>
-        <StatBadge value="98%" label="Satisfaction" gradient="linear-gradient(135deg,#10b981,#0ea5e9)" style={{ top: "65%", right: "8%" }} delay={1} />
+        <StatBadge value="98%" label="Satisfaction" gradient="linear-gradient(135deg,#00d4ff,#0077b6)" style={{ top: "65%", right: "8%" }} delay={1} />
         <TechPill icon={Code2} label="TypeScript" style={{ top: "78%", left: "5%" }} delay={2.6} />
       </motion.div>
 
@@ -328,7 +328,7 @@ export default function HeroSection() {
         </motion.div>
 
         <div className="absolute left-1/2 -translate-x-1/2 -bottom-20 w-80 h-20 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(ellipse, rgba(139,92,246,0.2) 0%, transparent 70%)", filter: "blur(20px)" }} />
+          style={{ background: "radial-gradient(ellipse, rgba(0,212,255,0.2) 0%, transparent 70%)", filter: "blur(20px)" }} />
       </motion.div>
 
       {/* Scroll cue */}
@@ -338,7 +338,7 @@ export default function HeroSection() {
       >
         <span className="text-[10px] text-slate-500 tracking-[0.3em] uppercase">Scroll</span>
         <motion.div
-          className="w-px h-10 bg-gradient-to-b from-violet-500/60 to-transparent"
+          className="w-px h-10 bg-gradient-to-b from-cyan-500/60 to-transparent"
           animate={{ scaleY: [1, 0.3, 1], opacity: [0.6, 0.2, 0.6] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           style={{ originY: 0 }}

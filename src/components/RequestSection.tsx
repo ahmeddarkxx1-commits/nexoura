@@ -89,27 +89,27 @@ export default function RequestSection() {
     >
       {/* Background with floating orbs */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 80% 50% at 50% 120%, rgba(236,72,153,0.08) 0%, transparent 60%), #020408",
+        background: "radial-gradient(ellipse 80% 50% at 50% 120%, rgba(0,119,182,0.08) 0%, transparent 60%), #020408",
       }}>
         <motion.div 
           animate={{ y: [0, -20, 0], x: [0, 10, 0] }} 
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-1/4 w-32 h-32 bg-violet-600/10 rounded-full blur-3xl"
+          className="absolute top-20 left-1/4 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl"
         />
         <motion.div 
           animate={{ y: [0, 30, 0], x: [0, -15, 0] }} 
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-20 right-1/4 w-40 h-40 bg-pink-600/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-1/4 w-40 h-40 bg-cyan-600/10 rounded-full blur-3xl"
         />
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <SectionLabel text="Start a Project" accent="#ec4899" />
+          <SectionLabel text="Start a Project" accent="#00b4d8" />
           <ScrollReveal>
             <h2 className="section-heading text-white mb-4">
               Let&apos;s Build Something{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">Extraordinary</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Extraordinary</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
@@ -176,7 +176,7 @@ export default function RequestSection() {
                           onBlur={() => setFocusedField(null)}
                           onChange={(e) => handleChange("name", e.target.value)}
                           className={`w-full bg-white/5 border rounded-xl px-5 py-4 text-white text-sm placeholder-slate-600 focus:outline-none transition-all duration-300 ${
-                            focusedField === 'name' ? 'border-pink-500/30 bg-white/10' : 'border-white/5'
+                            focusedField === 'name' ? 'border-blue-500/30 bg-white/10' : 'border-white/5'
                           }`}
                         />
                       </div>
@@ -192,7 +192,7 @@ export default function RequestSection() {
                           onBlur={() => setFocusedField(null)}
                           onChange={(e) => handleChange("email", e.target.value)}
                           className={`w-full bg-white/5 border rounded-2xl px-5 py-4 text-white text-sm placeholder-slate-600 focus:outline-none transition-all duration-300 ${
-                            focusedField === 'email' ? 'border-pink-500/50 shadow-[0_0_20px_rgba(236,72,153,0.15)] bg-white/10' : 'border-white/10'
+                            focusedField === 'email' ? 'border-blue-500/50 shadow-[0_0_20px_rgba(0,119,182,0.15)] bg-white/10' : 'border-white/10'
                           }`}
                         />
                       </div>
@@ -212,7 +212,7 @@ export default function RequestSection() {
                             onClick={() => handleChange("projectType", type)}
                             className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                               form.projectType === type
-                                ? "bg-gradient-to-r from-pink-600 to-violet-600 text-white shadow-[0_0_20px_rgba(236,72,153,0.3)] border-transparent"
+                                ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-[0_0_20px_rgba(0,119,182,0.3)] border-transparent"
                                 : "glass text-slate-400 hover:text-white border border-white/10 hover:border-white/30"
                             }`}
                           >
@@ -259,7 +259,7 @@ export default function RequestSection() {
                         onBlur={() => setFocusedField(null)}
                         onChange={(e) => handleChange("description", e.target.value)}
                         className={`w-full bg-white/5 border rounded-2xl px-5 py-4 text-white text-sm placeholder-slate-600 focus:outline-none transition-all duration-300 resize-none ${
-                          focusedField === 'desc' ? 'border-pink-500/50 shadow-[0_0_20px_rgba(236,72,153,0.15)] bg-white/10' : 'border-white/10'
+                          focusedField === 'desc' ? 'border-blue-500/50 shadow-[0_0_20px_rgba(0,119,182,0.15)] bg-white/10' : 'border-white/10'
                         }`}
                       />
                     </div>
@@ -273,7 +273,7 @@ export default function RequestSection() {
                         disabled={!form.name || !form.projectType || !form.budget}
                         className="w-full relative group overflow-hidden rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-violet-600 opacity-90 transition-opacity" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-90 transition-opacity" />
                         
                         <div className="relative py-4 px-6 flex items-center justify-center gap-3 text-white font-bold text-lg">
                           {tracking ? <Loader2 size={22} className="animate-spin" /> : <MessageCircle size={22} />}
@@ -282,7 +282,7 @@ export default function RequestSection() {
                         </div>
                       </motion.button>
                       <p className="text-xs font-medium text-center text-slate-500 mt-4 flex items-center justify-center gap-1.5">
-                        <Sparkles size={12} className="text-pink-500" />
+                        <Sparkles size={12} className="text-blue-500" />
                         Fast response guaranteed
                       </p>
                     </div>

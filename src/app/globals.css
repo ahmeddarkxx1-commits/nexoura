@@ -2,14 +2,14 @@
 
 @layer base {
   :root {
-    --neon-blue: #0ea5e9;
-    --neon-purple: #7c3aed;
-    --neon-pink: #db2777;
-    --dark-bg: #030712;
-    --dark-card: #0a0f1d;
-    --dark-border: rgba(124, 58, 237, 0.12);
-    --glow-blue: 0 4px 20px rgba(14, 165, 233, 0.15);
-    --glow-purple: 0 4px 20px rgba(124, 58, 237, 0.15);
+    --neon-blue: #00d4ff;
+    --neon-marine: #0077b6;
+    --neon-sea: #00b4d8;
+    --dark-bg: #020617; /* Deepest ocean blue-black */
+    --dark-card: #030712;
+    --dark-border: rgba(0, 212, 255, 0.12);
+    --glow-blue: 0 4px 20px rgba(0, 212, 255, 0.2);
+    --glow-marine: 0 4px 20px rgba(0, 119, 182, 0.2);
     --handcrafted-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   }
 
@@ -67,11 +67,11 @@
   }
 
   .glow-blue {
-    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15), 0 10px 40px rgba(14, 165, 233, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2), 0 10px 40px rgba(0, 212, 255, 0.05);
   }
 
-  .glow-purple {
-    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.2), 0 10px 40px rgba(124, 58, 237, 0.05);
+  .glow-marine {
+    box-shadow: 0 4px 20px rgba(0, 119, 182, 0.3), 0 10px 40px rgba(0, 119, 182, 0.1);
   }
 
   .soft-shadow {
@@ -84,7 +84,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 50%, #ec4899 100%);
+    background: linear-gradient(135deg, #00d4ff 0%, #0077b6 50%, #00b4d8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -125,7 +125,7 @@
   .cursor-glow {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0, 212, 255, 0.05) 40%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, rgba(0, 119, 182, 0.05) 40%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     position: fixed;
@@ -174,7 +174,7 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
     color: #fff;
     font-weight: 600;
     padding: 14px 34px;
@@ -185,7 +185,7 @@
     position: relative;
     overflow: hidden;
     letter-spacing: 0.01em;
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
   }
 
   .btn-primary:active {
@@ -196,7 +196,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #8b5cf6, #00d4ff);
+    background: linear-gradient(135deg, #00b4d8, #00d4ff);
     opacity: 0;
     transition: opacity 0.3s ease;
   }

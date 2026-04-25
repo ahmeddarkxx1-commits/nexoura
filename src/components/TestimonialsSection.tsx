@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
-            <SectionLabel text="Testimonials" accent="#7c3aed" />
+            <SectionLabel text="Testimonials" accent="#0077b6" />
             <ScrollReveal>
               <h2 className="section-heading text-white mb-4">
                 What Our <span className="text-gradient">Partners Say</span>
@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
               >
                 {/* Decoration */}
                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Quote size={80} className="text-violet-500" />
+                  <Quote size={80} className="text-blue-500" />
                 </div>
                 
                 <div className="relative z-10">
@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
                   </p>
                   
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center font-bold text-white">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center font-bold text-white">
                       {t.name.charAt(0)}
                     </div>
                     <div>

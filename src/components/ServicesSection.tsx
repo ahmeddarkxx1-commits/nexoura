@@ -14,7 +14,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
   const [hovered, setHovered] = useState(false);
   const [glow, setGlow] = useState({ x: 0, y: 0 });
 
-  const accentColor = service.isPopular ? "#8b5cf6" : "#00d4ff";
+  const accentColor = service.isPopular ? "#0077b6" : "#00b4d8";
 
   /* ── 3D tilt ── */
   const mx = useMotionValue(0.5);
@@ -61,7 +61,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
           transformStyle: "preserve-3d",
         }}
         className={`relative h-full rounded-3xl p-8 flex flex-col cursor-none select-none ${
-          service.isPopular ? "ring-1 ring-violet-500/50" : "glass-card"
+          service.isPopular ? "ring-1 ring-blue-500/50" : "glass-card"
         }`}
       >
         {/* Cursor glow (Softer) */}
@@ -76,7 +76,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
         {/* Base background for featured */}
         {service.isPopular && (
           <div className="absolute inset-0 rounded-3xl -z-10" style={{
-            background: "linear-gradient(145deg, rgba(139,92,246,0.12), rgba(99,102,241,0.08))",
+            background: "linear-gradient(145deg, rgba(0,119,182,0.15), rgba(0,180,216,0.1))",
             backdropFilter: "blur(24px)",
           }} />
         )}
@@ -88,7 +88,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
             <div className="absolute -top-12 left-1/2 -translate-x-1/2">
               <motion.div 
                 animate={{ y: hovered ? -2 : 0 }}
-                className="flex items-center gap-1.5 bg-gradient-to-r from-violet-600 to-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg shadow-violet-500/30"
+                className="flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg shadow-blue-500/30"
               >
                 <Sparkles size={10} />
                 Most Popular
@@ -108,7 +108,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
               {index + 1}
             </div>
             {service.isPopular && (
-              <Zap size={24} className="text-violet-400 opacity-50" />
+              <Zap size={24} className="text-blue-400 opacity-50" />
             )}
           </div>
 
@@ -145,7 +145,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
             href="#contact"
             className={`block text-center py-3.5 rounded-xl font-bold text-sm transition-all duration-400 ${
               service.isPopular
-                ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-violet-500/20 active:scale-95"
+                ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/20 active:scale-95"
                 : "glass text-white hover:bg-white/5 border border-white/10 active:scale-95"
             }`}
             style={{ transform: hovered ? "translateZ(10px)" : "none" }}
@@ -186,7 +186,7 @@ export default function ServicesSection() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <SectionLabel text="Services" accent="#00d4ff" />
+          <SectionLabel text="Services" accent="#00b4d8" />
           <ScrollReveal>
             <h2 className="section-heading text-white mb-4">
               Choose Your{" "}
@@ -202,7 +202,7 @@ export default function ServicesSection() {
 
         {loading ? (
           <div className="flex justify-center py-20">
-             <div className="w-10 h-10 border-4 border-violet-500/20 border-t-violet-500 rounded-full animate-spin" />
+             <div className="w-10 h-10 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin" />
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-12">

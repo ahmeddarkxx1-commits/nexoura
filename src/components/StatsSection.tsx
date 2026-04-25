@@ -38,7 +38,7 @@ export default function StatsSection() {
             className="absolute inset-0 pointer-events-none transition-opacity duration-500"
             style={{
               opacity: isHovered ? 1 : 0,
-              background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(139,92,246,0.15), transparent 60%)`,
+              background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,212,255,0.15), transparent 60%)`,
             }}
           />
 
@@ -62,20 +62,20 @@ export default function StatsSection() {
                   className="text-4xl md:text-6xl font-black mb-3 inline-block relative"
                   whileHover={{ scale: 1.1, rotate: [-2, 2, 0] }}
                 >
-                  <span className="text-gradient drop-shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+                  <span className="text-gradient drop-shadow-[0_0_15px_rgba(0,119,182,0.3)]">
                     <AnimatedCounter target={stat.value} duration={2.5} />
                   </span>
                   
                   {/* Subtle float behind number */}
                   <motion.div 
-                    className="absolute inset-0 bg-violet-500/20 blur-xl rounded-full z-[-1]"
+                    className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full z-[-1]"
                     animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
                     transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
                   />
                 </motion.div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-3 group-hover:w-24 group-hover:via-violet-500 transition-all duration-500" />
+                  <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mb-3 group-hover:w-24 group-hover:via-blue-500 transition-all duration-500" />
                   <p className="text-sm font-semibold tracking-widest text-slate-400 uppercase">{stat.label}</p>
                 </div>
               </motion.div>

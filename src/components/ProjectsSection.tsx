@@ -39,13 +39,13 @@ export default function ProjectsSection() {
       className="relative py-32 px-6 overflow-hidden z-20 -mt-12"
       style={{
         background:
-          "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(139,92,246,0.1) 0%, transparent 60%), #020408",
+          "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,119,182,0.1) 0%, transparent 60%), #020408",
       }}
     >
       {/* Section header */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <SectionLabel text="Our Work" accent="#8b5cf6" />
+          <SectionLabel text="Our Work" accent="#0077b6" />
           <ScrollReveal>
             <h2 className="section-heading text-white mb-4">
               Explore Our{" "}
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
           >
             {loading ? (
               <div className="flex justify-center py-20">
-                <div className="w-10 h-10 border-4 border-violet-500/20 border-t-violet-500 rounded-full animate-spin" />
+                <div className="w-10 h-10 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin" />
               </div>
             ) : filtered.length === 0 ? (
               <p className="text-center py-20 text-slate-500">

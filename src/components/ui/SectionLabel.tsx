@@ -6,7 +6,7 @@ interface SectionLabelProps {
   accent?: string;
 }
 
-export default function SectionLabel({ text, accent = "#00d4ff" }: SectionLabelProps) {
+export default function SectionLabel({ text, accent = "#00b4d8" }: SectionLabelProps) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}

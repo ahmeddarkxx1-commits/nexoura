@@ -10,25 +10,25 @@ const steps = [
     icon: Lightbulb,
     title: "Discover",
     description: "We deep-dive into your brand, goals, and audience to craft a digital strategy that converts.",
-    color: "#f59e0b",
+    color: "#00b4d8", // Sky blue
   },
   {
     icon: PenTool,
     title: "Design",
     description: "Cinematic mockups and interactive prototypes — you'll see the magic before a single line of code.",
-    color: "#8b5cf6",
+    color: "#0077b6", // Marine Blue
   },
   {
     icon: Code2,
     title: "Build",
     description: "Pixel-perfect development with clean code, blazing performance, and animations that impress.",
-    color: "#00d4ff",
+    color: "#00d4ff", // Bright Cyan
   },
   {
     icon: Rocket,
     title: "Launch",
     description: "We deploy, optimize, and hand over your digital empire — ready to grow from day one.",
-    color: "#10b981",
+    color: "#00a896", // Sea Teal
   },
 ];
 
@@ -126,12 +126,12 @@ export default function ProcessSection() {
   return (
     <section id="about" className="relative py-28 px-6 overflow-hidden" ref={containerRef}>
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 70% 30% at 50% 100%, rgba(139,92,246,0.05) 0%, transparent 70%)"
+        background: "radial-gradient(ellipse 70% 30% at 50% 100%, rgba(0,212,255,0.05) 0%, transparent 70%)"
       }} />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-24">
-          <SectionLabel text="Our Process" accent="#f59e0b" />
+          <SectionLabel text="Our Process" accent="#00b4d8" />
           <ScrollReveal>
             <h2 className="section-heading text-white mb-4">
               How We{" "}
@@ -149,8 +149,8 @@ export default function ProcessSection() {
         <div className="relative">
           {/* Animated Connecting line (desktop) */}
           <div className="hidden lg:block absolute top-[85px] left-[10%] right-[10%] h-px bg-white/10">
-            <motion.div 
-              className="absolute top-0 left-0 h-full bg-gradient-to-r from-violet-500 via-cyan-400 to-emerald-500"
+              <motion.div 
+                className="absolute top-0 left-0 h-full bg-gradient-to-r from-blue-600 via-cyan-400 to-teal-500"
               style={{ width: lineWidth }}
             />
             

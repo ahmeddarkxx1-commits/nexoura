@@ -31,8 +31,8 @@ export const projects: Project[] = [
     customPrice: 799,
     description: "A high-conversion e-commerce storefront designed for luxury brands. Includes a streamlined checkout flow and a focus on visual storytelling.",
     tags: ["Next.js", "Stripe", "MongoDB"],
-    gradient: "from-violet-600 to-indigo-600",
-    accentColor: "#8b5cf6",
+    gradient: "from-blue-600 to-cyan-600",
+    accentColor: "#0077b6",
     features: [
       "AI product recommendations",
       "One-click checkout",
@@ -119,8 +119,8 @@ export const projects: Project[] = [
     customPrice: 999,
     description: "An award-worthy creative agency portfolio with 3D card effects, dynamic project showcases, and an integrated booking system built to win clients.",
     tags: ["Next.js", "Three.js", "Framer Motion"],
-    gradient: "from-fuchsia-600 to-pink-600",
-    accentColor: "#ec4899",
+    gradient: "from-blue-500 to-cyan-500",
+    accentColor: "#00b4d8",
     features: [
       "3D card interactions",
       "Project showcase",
@@ -181,8 +181,8 @@ export const services: Service[] = [
     name: "Standard",
     price: "$499 – $1,200",
     tagline: "Template customization",
-    color: "from-violet-800 to-indigo-800",
-    accentColor: "rgba(139,92,246,0.6)",
+    color: "from-blue-800 to-cyan-800",
+    accentColor: "rgba(0,119,182,0.6)",
     featured: true,
     features: [
       "Full template customization",

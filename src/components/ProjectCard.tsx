@@ -27,8 +27,8 @@ export default function ProjectCard({
   const [glow, setGlow] = useState({ x: 0, y: 0 });
 
   // Default styling if not in DB
-  const accentColor = "#8b5cf6"; 
-  const gradient = "from-violet-600/20 to-cyan-600/20";
+  const accentColor = "#0077b6"; 
+  const gradient = "from-blue-600/20 to-cyan-600/20";
   const mainImage = project.images?.[0];
   const tags = project.techStack || [];
   const displayPrice = project.finalPrice || project.price;
@@ -90,7 +90,7 @@ export default function ProjectCard({
           transformStyle: "preserve-3d",
         }}
         className={`relative rounded-2xl overflow-hidden cursor-none select-none
-          ${featured || project.isFeatured ? "ring-1 ring-violet-500/40" : "glass-card"}`}
+          ${featured || project.isFeatured ? "ring-1 ring-blue-500/40" : "glass-card"}`}
         whileHover={{ scale: 1.04, z: 20 }}
         transition={{ scale: { duration: 0.3, ease: "easeOut" }, z: { duration: 0.3 } }}
       >

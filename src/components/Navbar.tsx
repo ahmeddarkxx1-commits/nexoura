@@ -80,7 +80,7 @@ export default function Navbar() {
             background: useMotionTemplate`
               radial-gradient(
                 200px circle at ${mouseX}px ${mouseY}px,
-                rgba(124, 58, 237, 0.08),
+                rgba(0, 212, 255, 0.1),
                 transparent 80%
               )
             `,
@@ -124,9 +124,9 @@ export default function Navbar() {
             <motion.div 
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-600 flex items-center justify-center relative"
+              className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-700 flex items-center justify-center relative"
             >
-              <div className="absolute inset-0 bg-violet-600/20 rounded-xl blur-sm -z-10" />
+              <div className="absolute inset-0 bg-blue-600/20 rounded-xl blur-sm -z-10" />
               <Zap size={18} className="text-white relative z-10" />
             </motion.div>
             <span className="text-xl font-black tracking-tight text-gradient">
@@ -154,7 +154,7 @@ export default function Navbar() {
                   <span className="absolute inset-0 rounded-lg bg-white/5 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300 -z-10" />
 
                   {/* Underline grow from center */}
-                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-cyan-400 to-violet-500 transition-all duration-300 ease-out ${isActive ? "w-4/5 opacity-100" : "w-0 opacity-0 group-hover/link:w-4/5 group-hover/link:opacity-100"}`} />
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-cyan-400 to-blue-600 transition-all duration-300 ease-out ${isActive ? "w-4/5 opacity-100" : "w-0 opacity-0 group-hover/link:w-4/5 group-hover/link:opacity-100"}`} />
                   
                   {/* Glow under active item */}
                   {isActive && (
@@ -172,7 +172,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="relative group/btn px-6 py-2 rounded-xl overflow-hidden font-bold text-sm text-white"
-                style={{ background: "linear-gradient(135deg, #0ea5e9, #7c3aed)" }}
+                style={{ background: "linear-gradient(135deg, #0077b6, #00b4d8)" }}
               >
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover/btn:opacity-100 transition-opacity" />
                 <span className="relative flex items-center gap-2">
@@ -215,7 +215,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[90] bg-[#020408]/80 flex flex-col items-center justify-center"
           >
             {/* Background elements */}
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-violet-600/20 rounded-full blur-[80px]" />
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/20 rounded-full blur-[80px]" />
             <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-600/20 rounded-full blur-[80px]" />
             
             <nav className="flex flex-col items-center gap-8 w-full px-6 relative z-10">
@@ -251,8 +251,8 @@ export default function Navbar() {
                   className="w-full relative group/mobbtn px-6 py-4 rounded-2xl overflow-hidden font-bold text-white block text-center"
                 >
                   {/* Background layers */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-violet-600" />
-                  <div className="absolute inset-[-2px] bg-gradient-to-r from-cyan-400 to-violet-500 rounded-2xl blur-lg opacity-60 group-hover/mobbtn:opacity-100 transition-opacity duration-300 -z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600" />
+                  <div className="absolute inset-[-2px] bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur-lg opacity-60 group-hover/mobbtn:opacity-100 transition-opacity duration-300 -z-10" />
                   <span className="relative">Start Your Project</span>
                 </Link>
               </motion.div>

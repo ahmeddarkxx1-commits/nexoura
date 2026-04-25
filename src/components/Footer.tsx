@@ -18,18 +18,18 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-violet-500/10 py-16 px-6 overflow-hidden">
+    <footer className="relative border-t border-blue-500/10 py-16 px-6 overflow-hidden">
       {/* Top glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-px"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.5), transparent)" }}
+        style={{ background: "linear-gradient(90deg, transparent, rgba(0,212,255,0.5), transparent)" }}
       />
 
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
           {/* Brand */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
               <Zap size={16} className="text-white" />
             </div>
             <span className="text-xl font-black text-gradient">Nexoura</span>

@@ -79,14 +79,14 @@ function Scene() {
   return (
     <>
       <ambientLight intensity={0.15} />
-      <pointLight position={[6, 4, 4]} intensity={3} color="#8b5cf6" />
-      <pointLight position={[-6, -4, 3]} intensity={2} color="#00d4ff" />
-      <pointLight position={[0, 0, 6]} intensity={0.8} color="#ec4899" />
-      <Shape position={[-4.8, 1.4, -3.5]} scale={1.2} color="#7c3aed" distort={0.2} speed={0.3} rotOffset={0} geo="ico" />
-      <Shape position={[4.5, -0.6, -4.5]} scale={0.95} color="#0ea5e9" distort={0.15} speed={0.25} rotOffset={2} geo="torusKnot" />
-      <Shape position={[-3.2, -2.5, -2.5]} scale={0.8} color="#6d28d9" distort={0.25} speed={0.4} rotOffset={4} geo="oct" />
-      <Shape position={[3.5, 2.8, -5.5]} scale={1.4} color="#2563eb" distort={0.1} speed={0.15} rotOffset={1} geo="sphere" />
-      <Shape position={[1.2, -3.4, -5]} scale={0.9} color="#4c1d95" distort={0.2} speed={0.3} rotOffset={3} geo="torus" />
+      <pointLight position={[6, 4, 4]} intensity={3} color="#0077b6" />
+      <pointLight position={[-6, -4, 3]} intensity={2} color="#00b4d8" />
+      <pointLight position={[0, 0, 6]} intensity={0.8} color="#023e8a" />
+      <Shape position={[-4.8, 1.4, -3.5]} scale={1.2} color="#0077b6" distort={0.2} speed={0.3} rotOffset={0} geo="ico" />
+      <Shape position={[4.5, -0.6, -4.5]} scale={0.95} color="#00b4d8" distort={0.15} speed={0.25} rotOffset={2} geo="torusKnot" />
+      <Shape position={[-3.2, -2.5, -2.5]} scale={0.8} color="#005f73" distort={0.25} speed={0.4} rotOffset={4} geo="oct" />
+      <Shape position={[3.5, 2.8, -5.5]} scale={1.4} color="#023e8a" distort={0.1} speed={0.15} rotOffset={1} geo="sphere" />
+      <Shape position={[1.2, -3.4, -5]} scale={0.9} color="#0077b6" distort={0.2} speed={0.3} rotOffset={3} geo="torus" />
     </>
   );
 }
